@@ -1,0 +1,725 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta name="robots" content="noindex, nofollow">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Johanns Reise ins Periodensystem</title>
+<style>
+:root{--bg:#070b1f;--bg2:#0f1640;--card:rgba(255,255,255,.06);--line:rgba(255,255,255,.14);--txt:#eef2ff;--mut:#a9b4e8;--neon:#5cf2ff;--pink:#ff5ca8;--yel:#ffe066;--pro:#ff4d6d;--neu:#9aa5b8;--ele:#4dd8ff;
+--am:#ff6b6b;--ae:#ffa94d;--tm:#ffd43b;--pt:#69db7c;--md:#38d9a9;--nm:#4dabf7;--hl:#9775fa;--ng:#f783ac;--la:#66d9e8;--ac:#e599f7}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{margin:0;font-family:"Trebuchet MS","Avenir Next","Segoe UI",system-ui,-apple-system,sans-serif;color:var(--txt);font-size:19px;line-height:1.5;
+background:radial-gradient(1200px 700px at 80% -10%,#2a1b6b 0%,transparent 60%),radial-gradient(900px 600px at -10% 30%,#0d3b66 0%,transparent 55%),var(--bg);min-height:100vh;overflow-x:hidden}
+body:before{content:"";position:fixed;top:0;right:0;bottom:0;left:0;inset:0;pointer-events:none;z-index:0;opacity:.8;
+background-image:radial-gradient(1.5px 1.5px at 20px 30px,#fff,transparent),radial-gradient(1px 1px at 120px 80px,#cfe,transparent),radial-gradient(1.5px 1.5px at 200px 160px,#fff,transparent),radial-gradient(1px 1px at 300px 40px,#fde,transparent),radial-gradient(1px 1px at 360px 220px,#fff,transparent),radial-gradient(1.5px 1.5px at 80px 260px,#def,transparent);background-size:400px 300px;animation:tw 6s ease-in-out infinite alternate}
+@keyframes tw{from{opacity:.45}to{opacity:.9}}
+main,header,footer{position:relative;z-index:1}
+b{color:#fff}
+.top{position:sticky;top:0;z-index:20;display:flex;align-items:center;gap:10px;padding:8px 14px;background:rgba(7,11,31,.82);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.logo{font-weight:800;font-size:20px;white-space:nowrap;background:linear-gradient(90deg,var(--neon),var(--pink));-webkit-background-clip:text;background-clip:text;color:transparent}
+nav{display:flex;gap:4px;overflow-x:auto;flex:1;scrollbar-width:none}nav::-webkit-scrollbar{display:none}
+nav a{color:var(--mut);text-decoration:none;padding:8px 12px;border-radius:999px;font-size:16px;white-space:nowrap;transition:.2s}
+nav a:hover,nav a.on{color:#fff;background:rgba(92,242,255,.15)}
+.lang{display:flex;border:2px solid var(--neon);border-radius:999px;overflow:hidden;flex:none}
+.lang button{all:unset;cursor:pointer;padding:6px 12px;font-weight:800;font-size:15px;color:var(--neon)}
+.lang button.on{background:var(--neon);color:#071028}
+section{max-width:1180px;margin:0 auto;padding:56px 18px}
+h1{font-size:clamp(34px,6vw,64px);line-height:1.08;margin:.2em 0;background:linear-gradient(90deg,#fff,var(--neon) 40%,var(--pink));-webkit-background-clip:text;background-clip:text;color:transparent}
+h2{font-size:clamp(28px,4vw,42px);margin:0 0 12px}
+h2 .em{display:inline-block;animation:bob 2.4s ease-in-out infinite}
+@keyframes bob{50%{transform:translateY(-6px) rotate(6deg)}}
+.lead{font-size:clamp(18px,2.2vw,22px);color:#dfe5ff;max-width:860px}
+.kicker{color:var(--yel);font-weight:800;letter-spacing:.06em;text-transform:uppercase;font-size:15px}
+.hero{display:grid;grid-template-columns:1.3fr 1fr;gap:30px;align-items:center;min-height:calc(100vh - 60px)}
+.hero svg{width:100%;max-width:420px;filter:drop-shadow(0 0 30px rgba(92,242,255,.35))}
+.btn{display:inline-flex;align-items:center;gap:8px;border:none;cursor:pointer;font:inherit;font-weight:800;font-size:19px;color:#071028;background:linear-gradient(90deg,var(--neon),#8affc1);padding:14px 26px;border-radius:999px;box-shadow:0 6px 24px rgba(92,242,255,.35);transition:transform .15s,box-shadow .15s;touch-action:manipulation;text-decoration:none}
+.btn:hover{transform:translateY(-2px) scale(1.03)}.btn:active{transform:scale(.97)}
+.btn.ghost{background:transparent;color:var(--txt);border:2px solid var(--line);box-shadow:none}
+.btn.sm{font-size:16px;padding:9px 16px}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:16px;margin-top:22px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:22px;padding:20px;transition:transform .25s,border-color .25s}
+.card:hover{transform:translateY(-4px);border-color:rgba(92,242,255,.5)}
+.card h3{margin:0 0 6px;font-size:22px}
+.card p{margin:0;color:#d6dcff}
+.dot{display:inline-block;width:22px;height:22px;border-radius:50%;vertical-align:-4px;margin-right:6px;box-shadow:0 0 12px currentColor}
+.dot.p{background:var(--pro);color:var(--pro)}.dot.n{background:var(--neu);color:var(--neu)}.dot.e{background:var(--ele);color:var(--ele)}.dot.s{border:3px dashed var(--neon);color:transparent}
+.split{display:grid;grid-template-columns:1fr 1fr;gap:26px;align-items:center}
+.note{background:linear-gradient(90deg,rgba(255,92,168,.15),rgba(92,242,255,.12));border:1px solid var(--line);border-radius:18px;padding:14px 18px;margin-top:18px}
+.bohr{width:100%;max-width:340px;display:block;margin:0 auto}
+.bohr .orbit{fill:none;stroke:rgba(92,242,255,.35);stroke-width:1.5;stroke-dasharray:4 5}
+.bohr .el{fill:var(--ele);filter:url(#glow)}.bohr .el.out{fill:var(--yel)}
+.bohr .pr{fill:var(--pro)}.bohr .nu{fill:var(--neu)}
+.bohr text{font-weight:800;fill:#fff;text-anchor:middle;dominant-baseline:central;pointer-events:none}
+.figcap{text-align:center;color:var(--mut);font-size:16px;margin-top:6px}
+/* builder */
+.builder{display:grid;grid-template-columns:1fr 1.1fr;gap:24px;align-items:start;margin-top:18px}
+.ctrl{display:grid;gap:12px}
+.ctrlrow{display:flex;align-items:center;gap:12px;background:var(--card);border:1px solid var(--line);border-radius:18px;padding:10px 14px}
+.ctrlrow .lab{flex:1;font-weight:800;font-size:20px}
+.ctrlrow .num{min-width:52px;text-align:center;font-size:30px;font-weight:900}
+.pm{width:54px;height:54px;border-radius:50%;border:none;font-size:30px;font-weight:900;cursor:pointer;color:#071028;touch-action:manipulation;transition:transform .1s}
+.pm:active{transform:scale(.88)}
+.pm.p{background:var(--pro)}.pm.n{background:var(--neu)}.pm.e{background:var(--ele)}
+.readout{text-align:center;background:var(--card);border:1px solid var(--line);border-radius:22px;padding:16px}
+.bigsym{font-size:64px;font-weight:900;line-height:1;margin:4px 0}
+.bigname{font-size:26px;font-weight:800}
+.pill{display:inline-block;padding:4px 12px;border-radius:999px;font-weight:800;font-size:16px;margin:4px 2px;background:rgba(255,255,255,.1)}
+.pill.ok{background:rgba(105,219,124,.25);color:#b6ffc4}.pill.pos{background:rgba(255,77,109,.25);color:#ffc2cf}.pill.neg{background:rgba(77,216,255,.25);color:#c4f3ff}
+.hint{font-size:16px;color:#d6dcff;margin-top:8px;min-height:2.6em}
+.missions{display:grid;gap:8px}
+.mission{display:flex;gap:10px;align-items:flex-start;padding:10px 12px;border-radius:14px;background:rgba(255,255,255,.04);border:1px solid var(--line);font-size:16px}
+.mission.done{border-color:#69db7c;background:rgba(105,219,124,.12)}
+.mission .ck{font-size:20px;line-height:1.2}
+.btnrow{display:flex;flex-wrap:wrap;gap:8px}
+/* table */
+.tablewrap{overflow-x:auto;-webkit-overflow-scrolling:touch;padding:10px 4px 14px;margin:0 -4px}
+.ptable{--c:clamp(34px,5.1vw,60px);display:grid;grid-template-columns:18px repeat(18,var(--c));grid-template-rows:18px repeat(7,var(--c)) 12px repeat(2,var(--c));gap:3px;width:max-content;margin:0 auto}
+.ptable.mini{--c:clamp(24px,3.6vw,40px);gap:2px}
+.ptable .lbl{font-size:11px;color:var(--mut);display:flex;align-items:center;justify-content:center;font-weight:800}
+.cell{position:relative;border:1.5px solid var(--cc);background:color-mix(in srgb,var(--cc) 22%,transparent);background-color:rgba(255,255,255,.06);border-radius:8px;color:#fff;padding:0;font:inherit;cursor:pointer;display:flex;flex-direction:column;align-items:center;justify-content:center;transition:transform .15s,opacity .3s,box-shadow .2s,filter .3s;touch-action:manipulation;overflow:hidden;line-height:1}
+@supports (background:color-mix(in srgb,red 20%,transparent)){.cell{background:color-mix(in srgb,var(--cc) 22%,transparent)}}
+.cell:hover,.cell:focus-visible{transform:scale(1.18);z-index:3;box-shadow:0 0 18px var(--cc);outline:none}
+.cell .cz{position:absolute;top:2px;left:3px;font-size:calc(var(--c)*.2);opacity:.85}
+.cell .cs{font-weight:900;font-size:calc(var(--c)*.4)}
+.cell .cn{font-size:calc(var(--c)*.15);opacity:.85;margin-top:2px;max-width:100%;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;padding:0 2px}
+.mini .cell .cn,.mini .cell .cz{display:none}.mini .cell .cs{font-size:calc(var(--c)*.42)}
+.cell.ph{cursor:default;opacity:.7;border-style:dashed}.cell.ph .cs{font-size:calc(var(--c)*.2)}
+.cell.ph:hover{transform:none;box-shadow:none}
+.ptable.dimmed .cell:not(.hi){opacity:.18;filter:grayscale(.7)}
+.cell.hi{box-shadow:0 0 14px var(--cc),inset 0 0 10px var(--cc);animation:pulse 1.6s ease-in-out infinite}
+@keyframes pulse{50%{box-shadow:0 0 26px var(--cc),inset 0 0 14px var(--cc)}}
+.cell.good{--cc:#69db7c!important;animation:pop .5s}.cell.bad{--cc:#ff4d6d!important;animation:shake .4s}
+@keyframes pop{50%{transform:scale(1.4)}}@keyframes shake{25%{transform:translateX(-4px)}75%{transform:translateX(4px)}}
+.c-am{--cc:var(--am)}.c-ae{--cc:var(--ae)}.c-tm{--cc:var(--tm)}.c-pt{--cc:var(--pt)}.c-md{--cc:var(--md)}.c-nm{--cc:var(--nm)}.c-hl{--cc:var(--hl)}.c-ng{--cc:var(--ng)}.c-la{--cc:var(--la)}.c-ac{--cc:var(--ac)}
+.legend{display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin:14px 0 4px}
+.legend button{font:inherit;font-size:15px;color:#fff;cursor:pointer;border:1.5px solid var(--cc);background:rgba(255,255,255,.05);border-radius:999px;padding:6px 12px;display:flex;align-items:center;gap:6px;touch-action:manipulation}
+.legend button i{width:12px;height:12px;border-radius:50%;background:var(--cc);display:inline-block}
+.legend button.on{background:var(--cc);color:#071028;font-weight:800}
+.small{font-size:15px;color:var(--mut);text-align:center}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin:16px 0}
+.chip{font:inherit;font-weight:800;font-size:17px;min-width:52px;min-height:48px;border-radius:14px;border:2px solid var(--line);background:var(--card);color:#fff;cursor:pointer;padding:6px 12px;transition:.2s;touch-action:manipulation}
+.chip.on{border-color:var(--neon);background:rgba(92,242,255,.2);box-shadow:0 0 16px rgba(92,242,255,.4)}
+.infobox{background:var(--card);border:1px solid var(--line);border-radius:22px;padding:18px;margin-top:16px}
+.pair{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:10px}
+.pair .bohr{max-width:240px}
+.scene{margin-top:12px;padding:14px;border-radius:16px;background:rgba(0,0,0,.25);text-align:center;font-size:20px;font-weight:800;overflow:hidden;position:relative;min-height:70px}
+.scene .emo{display:inline-block;font-size:36px;margin:0 6px}
+.zoom{animation:zoom 1.6s ease-in-out infinite alternate}@keyframes zoom{from{transform:translateX(-40px) rotate(-10deg)}to{transform:translateX(40px) rotate(10deg)}}
+.boom{animation:boom 1s ease-in-out infinite}@keyframes boom{50%{transform:scale(1.5)}}
+.zzz{animation:zzz 2.5s ease-in-out infinite}@keyframes zzz{50%{transform:translateY(-8px);opacity:.5}}
+.yl{color:var(--yel);font-weight:800}
+/* modal */
+.modal{position:fixed;top:0;right:0;bottom:0;left:0;inset:0;z-index:50;display:none;align-items:center;justify-content:center;background:rgba(3,6,20,.7);backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px);padding:14px}
+.modal.open{display:flex;animation:fade .25s}
+@keyframes fade{from{opacity:0}}
+.panel{position:relative;width:min(880px,100%);max-height:calc(100vh - 28px);overflow:auto;border-radius:26px;background:linear-gradient(160deg,#151f5c,#0a0f2e);border:2px solid var(--cc);box-shadow:0 0 50px color-mix(in srgb,var(--cc) 50%,transparent);padding:22px;animation:rise .35s cubic-bezier(.2,1.4,.4,1)}
+@keyframes rise{from{transform:translateY(30px) scale(.94);opacity:0}}
+.panel .grid{display:grid;grid-template-columns:1fr 1fr;gap:18px;align-items:center}
+.ptile{width:120px;height:120px;border-radius:20px;border:3px solid var(--cc);display:flex;flex-direction:column;align-items:center;justify-content:center;background:rgba(255,255,255,.06);box-shadow:0 0 24px var(--cc);position:relative}
+.ptile .s{font-size:54px;font-weight:900;line-height:1}.ptile .z{position:absolute;top:6px;left:10px;font-weight:800}
+.phead{display:flex;gap:18px;align-items:center}
+.phead h3{margin:0;font-size:32px}.phead .alt{color:var(--mut);font-size:18px}
+.stats{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin:14px 0}
+.stat{background:rgba(255,255,255,.06);border-radius:14px;padding:8px 12px}
+.stat .k{font-size:14px;color:var(--mut)}.stat .v{font-size:22px;font-weight:900}
+.fact{background:rgba(255,224,102,.1);border:1px solid rgba(255,224,102,.4);border-radius:16px;padding:12px 14px;margin-top:10px}
+.fact b{color:var(--yel)}
+.pnav{display:flex;justify-content:space-between;gap:8px;margin-top:14px}
+.xbtn{position:absolute;top:12px;right:12px}
+/* quiz */
+.quizbox{background:var(--card);border:1px solid var(--line);border-radius:26px;padding:22px;margin-top:16px}
+.qtop{display:flex;justify-content:space-between;color:var(--mut);font-weight:800;font-size:16px}
+.bar{height:10px;border-radius:99px;background:rgba(255,255,255,.1);overflow:hidden;margin:8px 0 14px}.bar i{display:block;height:100%;background:linear-gradient(90deg,var(--neon),var(--pink));transition:width .4s}
+.qq{font-size:clamp(22px,3vw,30px);font-weight:800;margin:4px 0 14px}
+.opts{display:grid;gap:10px}
+.opt{font:inherit;font-size:20px;text-align:left;padding:14px 18px;border-radius:16px;border:2px solid var(--line);background:rgba(255,255,255,.05);color:#fff;cursor:pointer;transition:.2s;touch-action:manipulation}
+.opt:hover:not(:disabled){border-color:var(--neon);transform:translateX(4px)}
+.opt.good{border-color:#69db7c;background:rgba(105,219,124,.25)}.opt.bad{border-color:#ff4d6d;background:rgba(255,77,109,.2)}
+.fb{margin-top:14px;font-size:19px;min-height:1.5em}
+.fb .r{color:#8cff9e;font-weight:900}.fb .w{color:#ff8fa3;font-weight:900}
+.result{text-align:center}.result .trophy{font-size:90px;animation:bob 2s ease-in-out infinite;display:inline-block}
+#confetti{position:fixed;top:0;right:0;bottom:0;left:0;inset:0;pointer-events:none;z-index:100}
+footer{text-align:center;color:var(--mut);padding:30px 10px 50px;font-size:16px}
+.reveal{opacity:0;transform:translateY(24px);transition:opacity .7s,transform .7s}.reveal.vis{opacity:1;transform:none}
+@media (max-width:820px){.hero,.split,.builder,.panel .grid{grid-template-columns:1fr}.hero{min-height:auto}.hero svg{max-width:300px;margin:0 auto;display:block}.logo{display:none}body{font-size:18px}}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+</style>
+</head>
+<body>
+<noscript>
+<style>main,footer,.top,.modal,#confetti{display:none!important}
+.nojs{position:relative;z-index:5;max-width:640px;margin:40px auto;padding:24px;border-radius:22px;border:2px solid #5cf2ff;background:rgba(15,22,64,.92);color:#eef2ff;font-size:18px;line-height:1.5}
+.nojs h1{font-size:28px;margin:0 0 10px}.nojs h2{font-size:20px;margin:18px 0 6px;color:#ffe066}.nojs p{margin:6px 0}</style>
+<div class="nojs" lang="de">
+<h1>⚛️ Johanns Reise ins Periodensystem</h1>
+<h2>🇩🇪 In Safari öffnen</h2>
+<p>Diese Vorschau kann die Seite nicht starten, weil hier kein JavaScript läuft (z.&nbsp;B. Dateivorschau in „Dateien“, Mail oder Chat).</p>
+<p><b>So klappt es:</b> Die Seite in <b>Safari</b> öffnen – am iPhone/iPad über einen <b>Link</b> (Datei online stellen) – oder am Computer die Datei per Doppelklick in Chrome, Safari, Firefox oder Edge öffnen.</p>
+<h2 lang="en">🇬🇧 Open in Safari</h2>
+<p lang="en">This preview can't start the page because JavaScript doesn't run here (e.g. the Files, Mail or chat preview).</p>
+<p lang="en"><b>How to fix:</b> open the page in <b>Safari</b> – on iPhone/iPad via a <b>link</b> (put the file online) – or on a computer, double-click the file to open it in Chrome, Safari, Firefox or Edge.</p>
+</div>
+</noscript>
+<svg width="0" height="0" style="position:absolute"><defs><filter id="glow" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="1.6" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter></defs></svg>
+<header class="top">
+  <div class="logo">⚛ Johann</div>
+  <nav id="nav">
+    <a href="#intro" data-t="navIntro"></a><a href="#atom" data-t="navAtom"></a><a href="#builder" data-t="navBuild"></a><a href="#table" data-t="navTable"></a><a href="#periods" data-t="navRows"></a><a href="#groups" data-t="navCols"></a><a href="#quiz" data-t="navQuiz"></a>
+  </nav>
+  <div class="lang" role="group" aria-label="Sprache / Language"><button id="lde" type="button">DE</button><button id="len" type="button">EN</button></div>
+</header>
+<main>
+<section id="intro" class="hero">
+  <div>
+    <div class="kicker" data-t="heroKicker"></div>
+    <h1 data-t="heroTitle"></h1>
+    <p class="lead" data-t="heroText"></p>
+    <a class="btn" href="#atom" data-t="heroBtn"></a>
+  </div>
+  <div id="heroAtom"></div>
+</section>
+<section class="reveal">
+  <h2><span class="em">🔍</span> <span data-t="whatTitle"></span></h2>
+  <p class="lead" data-t="whatText"></p>
+  <div class="cards">
+    <div class="card"><h3 data-t="c1t"></h3><p data-t="c1"></p></div>
+    <div class="card"><h3 data-t="c2t"></h3><p data-t="c2"></p></div>
+    <div class="card"><h3 data-t="c3t"></h3><p data-t="c3"></p></div>
+  </div>
+</section>
+<section id="atom" class="reveal">
+  <h2><span class="em">⚛️</span> <span data-t="atomTitle"></span></h2>
+  <p class="lead" data-t="atomLead"></p>
+  <div class="split">
+    <div class="cards" style="grid-template-columns:1fr 1fr">
+      <div class="card"><h3><span class="dot p"></span><span data-t="pTitle"></span></h3><p data-t="pText"></p></div>
+      <div class="card"><h3><span class="dot n"></span><span data-t="nTitle"></span></h3><p data-t="nText"></p></div>
+      <div class="card"><h3><span class="dot e"></span><span data-t="eTitle"></span></h3><p data-t="eText"></p></div>
+      <div class="card"><h3><span class="dot s"></span><span data-t="shTitle"></span></h3><p data-t="shText"></p></div>
+    </div>
+    <div><div id="demoAtom"></div><div class="figcap" data-t="demoLabel"></div></div>
+  </div>
+  <div class="note" data-t="chargeNote"></div>
+</section>
+<section id="builder" class="reveal">
+  <h2><span class="em">🔬</span> <span data-t="buildTitle"></span></h2>
+  <p class="lead" data-t="buildLead"></p>
+  <div class="builder">
+    <div class="ctrl">
+      <div class="ctrlrow"><span class="dot p"></span><span class="lab" data-t="protons"></span><button class="pm p" data-k="p" data-d="-1" aria-label="-">−</button><span class="num" id="np">0</span><button class="pm p" data-k="p" data-d="1" aria-label="+">+</button></div>
+      <div class="ctrlrow"><span class="dot n"></span><span class="lab" data-t="neutrons"></span><button class="pm n" data-k="n" data-d="-1" aria-label="-">−</button><span class="num" id="nn">0</span><button class="pm n" data-k="n" data-d="1" aria-label="+">+</button></div>
+      <div class="ctrlrow"><span class="dot e"></span><span class="lab" data-t="electrons"></span><button class="pm e" data-k="e" data-d="-1" aria-label="-">−</button><span class="num" id="ne">0</span><button class="pm e" data-k="e" data-d="1" aria-label="+">+</button></div>
+      <div class="btnrow"><button class="btn sm ghost" id="bNeutral" data-t="makeNeutral"></button><button class="btn sm ghost" id="bCommon" data-t="makeCommon"></button><button class="btn sm ghost" id="bReset" data-t="reset"></button></div>
+      <h3 style="margin:10px 0 0" data-t="missionsTitle"></h3>
+      <div class="missions" id="missions"></div>
+    </div>
+    <div class="readout"><div id="bAtom"></div><div id="bInfo"></div></div>
+  </div>
+</section>
+<section id="table" class="reveal">
+  <h2><span class="em">🧪</span> <span data-t="tableTitle"></span></h2>
+  <p class="lead" data-t="tableLead"></p>
+  <div class="legend" id="legend"></div>
+  <div class="tablewrap"><div id="mainTable"></div></div>
+  <p class="small" data-t="fRowNote"></p>
+</section>
+<section id="periods" class="reveal">
+  <h2><span class="em">↔️</span> <span data-t="rowsTitle"></span></h2>
+  <p class="lead" data-t="rowsLead"></p>
+  <div class="chips" id="periodChips"></div>
+  <div class="tablewrap"><div id="periodTable"></div></div>
+  <div class="infobox" id="periodInfo"></div>
+</section>
+<section id="groups" class="reveal">
+  <h2><span class="em">↕️</span> <span data-t="colsTitle"></span></h2>
+  <p class="lead" data-t="colsLead"></p>
+  <div class="chips" id="groupChips"></div>
+  <div class="tablewrap"><div id="groupTable"></div></div>
+  <div class="infobox" id="groupInfo"></div>
+</section>
+<section id="quiz" class="reveal">
+  <h2><span class="em">🏆</span> <span data-t="quizTitle"></span></h2>
+  <p class="lead" data-t="quizLead"></p>
+  <div class="quizbox" id="quizBox"></div>
+</section>
+</main>
+<footer data-t="footer"></footer>
+<div class="modal" id="modal" role="dialog" aria-modal="true"><div class="panel" id="panel"></div></div>
+<canvas id="confetti"></canvas>
+<script>
+// ---------- ELEMENT DATA: [symbol, German, English, standard atomic weight ("(x)" = mass number of most stable isotope), mass number of most common / most stable isotope, category]
+const RAW=[
+["H","Wasserstoff","Hydrogen","1.008",1,"nm"],["He","Helium","Helium","4.0026",4,"ng"],
+["Li","Lithium","Lithium","6.94",7,"am"],["Be","Beryllium","Beryllium","9.0122",9,"ae"],["B","Bor","Boron","10.81",11,"md"],["C","Kohlenstoff","Carbon","12.011",12,"nm"],["N","Stickstoff","Nitrogen","14.007",14,"nm"],["O","Sauerstoff","Oxygen","15.999",16,"nm"],["F","Fluor","Fluorine","18.998",19,"hl"],["Ne","Neon","Neon","20.180",20,"ng"],
+["Na","Natrium","Sodium","22.990",23,"am"],["Mg","Magnesium","Magnesium","24.305",24,"ae"],["Al","Aluminium","Aluminium","26.982",27,"pt"],["Si","Silicium","Silicon","28.085",28,"md"],["P","Phosphor","Phosphorus","30.974",31,"nm"],["S","Schwefel","Sulfur","32.06",32,"nm"],["Cl","Chlor","Chlorine","35.45",35,"hl"],["Ar","Argon","Argon","39.95",40,"ng"],
+["K","Kalium","Potassium","39.098",39,"am"],["Ca","Calcium","Calcium","40.078",40,"ae"],["Sc","Scandium","Scandium","44.956",45,"tm"],["Ti","Titan","Titanium","47.867",48,"tm"],["V","Vanadium","Vanadium","50.942",51,"tm"],["Cr","Chrom","Chromium","51.996",52,"tm"],["Mn","Mangan","Manganese","54.938",55,"tm"],["Fe","Eisen","Iron","55.845",56,"tm"],["Co","Cobalt","Cobalt","58.933",59,"tm"],["Ni","Nickel","Nickel","58.693",58,"tm"],["Cu","Kupfer","Copper","63.546",63,"tm"],["Zn","Zink","Zinc","65.38",64,"tm"],["Ga","Gallium","Gallium","69.723",69,"pt"],["Ge","Germanium","Germanium","72.630",74,"md"],["As","Arsen","Arsenic","74.922",75,"md"],["Se","Selen","Selenium","78.971",80,"nm"],["Br","Brom","Bromine","79.904",79,"hl"],["Kr","Krypton","Krypton","83.798",84,"ng"],
+["Rb","Rubidium","Rubidium","85.468",85,"am"],["Sr","Strontium","Strontium","87.62",88,"ae"],["Y","Yttrium","Yttrium","88.906",89,"tm"],["Zr","Zirconium","Zirconium","91.224",90,"tm"],["Nb","Niob","Niobium","92.906",93,"tm"],["Mo","Molybdän","Molybdenum","95.95",98,"tm"],["Tc","Technetium","Technetium","(98)",98,"tm"],["Ru","Ruthenium","Ruthenium","101.07",102,"tm"],["Rh","Rhodium","Rhodium","102.91",103,"tm"],["Pd","Palladium","Palladium","106.42",106,"tm"],["Ag","Silber","Silver","107.87",107,"tm"],["Cd","Cadmium","Cadmium","112.41",114,"tm"],["In","Indium","Indium","114.82",115,"pt"],["Sn","Zinn","Tin","118.71",120,"pt"],["Sb","Antimon","Antimony","121.76",121,"md"],["Te","Tellur","Tellurium","127.60",130,"md"],["I","Iod","Iodine","126.90",127,"hl"],["Xe","Xenon","Xenon","131.29",132,"ng"],
+["Cs","Caesium","Caesium","132.91",133,"am"],["Ba","Barium","Barium","137.33",138,"ae"],
+["La","Lanthan","Lanthanum","138.91",139,"la"],["Ce","Cer","Cerium","140.12",140,"la"],["Pr","Praseodym","Praseodymium","140.91",141,"la"],["Nd","Neodym","Neodymium","144.24",142,"la"],["Pm","Promethium","Promethium","(145)",145,"la"],["Sm","Samarium","Samarium","150.36",152,"la"],["Eu","Europium","Europium","151.96",153,"la"],["Gd","Gadolinium","Gadolinium","157.25",158,"la"],["Tb","Terbium","Terbium","158.93",159,"la"],["Dy","Dysprosium","Dysprosium","162.50",164,"la"],["Ho","Holmium","Holmium","164.93",165,"la"],["Er","Erbium","Erbium","167.26",166,"la"],["Tm","Thulium","Thulium","168.93",169,"la"],["Yb","Ytterbium","Ytterbium","173.05",174,"la"],["Lu","Lutetium","Lutetium","174.97",175,"la"],
+["Hf","Hafnium","Hafnium","178.49",180,"tm"],["Ta","Tantal","Tantalum","180.95",181,"tm"],["W","Wolfram","Tungsten","183.84",184,"tm"],["Re","Rhenium","Rhenium","186.21",187,"tm"],["Os","Osmium","Osmium","190.23",192,"tm"],["Ir","Iridium","Iridium","192.22",193,"tm"],["Pt","Platin","Platinum","195.08",195,"tm"],["Au","Gold","Gold","196.97",197,"tm"],["Hg","Quecksilber","Mercury","200.59",202,"tm"],["Tl","Thallium","Thallium","204.38",205,"pt"],["Pb","Blei","Lead","207.2",208,"pt"],["Bi","Bismut","Bismuth","208.98",209,"pt"],["Po","Polonium","Polonium","(209)",209,"pt"],["At","Astat","Astatine","(210)",210,"hl"],["Rn","Radon","Radon","(222)",222,"ng"],
+["Fr","Francium","Francium","(223)",223,"am"],["Ra","Radium","Radium","(226)",226,"ae"],
+["Ac","Actinium","Actinium","(227)",227,"ac"],["Th","Thorium","Thorium","232.04",232,"ac"],["Pa","Protactinium","Protactinium","231.04",231,"ac"],["U","Uran","Uranium","238.03",238,"ac"],["Np","Neptunium","Neptunium","(237)",237,"ac"],["Pu","Plutonium","Plutonium","(244)",244,"ac"],["Am","Americium","Americium","(243)",243,"ac"],["Cm","Curium","Curium","(247)",247,"ac"],["Bk","Berkelium","Berkelium","(247)",247,"ac"],["Cf","Californium","Californium","(251)",251,"ac"],["Es","Einsteinium","Einsteinium","(252)",252,"ac"],["Fm","Fermium","Fermium","(257)",257,"ac"],["Md","Mendelevium","Mendelevium","(258)",258,"ac"],["No","Nobelium","Nobelium","(259)",259,"ac"],["Lr","Lawrencium","Lawrencium","(266)",266,"ac"],
+["Rf","Rutherfordium","Rutherfordium","(267)",267,"tm"],["Db","Dubnium","Dubnium","(268)",268,"tm"],["Sg","Seaborgium","Seaborgium","(269)",269,"tm"],["Bh","Bohrium","Bohrium","(270)",270,"tm"],["Hs","Hassium","Hassium","(269)",269,"tm"],["Mt","Meitnerium","Meitnerium","(278)",278,"tm"],["Ds","Darmstadtium","Darmstadtium","(281)",281,"tm"],["Rg","Roentgenium","Roentgenium","(282)",282,"tm"],["Cn","Copernicium","Copernicium","(285)",285,"tm"],["Nh","Nihonium","Nihonium","(286)",286,"pt"],["Fl","Flerovium","Flerovium","(289)",289,"pt"],["Mc","Moscovium","Moscovium","(290)",290,"pt"],["Lv","Livermorium","Livermorium","(293)",293,"pt"],["Ts","Tenness","Tennessine","(294)",294,"hl"],["Og","Oganesson","Oganesson","(294)",294,"ng"]
+];
+// ---------- ELECTRONS PER SHELL (K,L,M,N,O,P,Q), ground-state configurations
+const SH=["1","2","2,1","2,2","2,3","2,4","2,5","2,6","2,7","2,8","2,8,1","2,8,2","2,8,3","2,8,4","2,8,5","2,8,6","2,8,7","2,8,8"]
+.concat("8,1|8,2|9,2|10,2|11,2|13,1|13,2|14,2|15,2|16,2|18,1|18,2|18,3|18,4|18,5|18,6|18,7|18,8".split("|").map(s=>"2,8,"+s))
+.concat("8,1|8,2|9,2|10,2|12,1|13,1|13,2|15,1|16,1|18|18,1|18,2|18,3|18,4|18,5|18,6|18,7|18,8".split("|").map(s=>"2,8,18,"+s))
+.concat("18,8,1|18,8,2|18,9,2|19,9,2|21,8,2|22,8,2|23,8,2|24,8,2|25,8,2|25,9,2|27,8,2|28,8,2|29,8,2|30,8,2|31,8,2|32,8,2|32,9,2|32,10,2|32,11,2|32,12,2|32,13,2|32,14,2|32,15,2|32,17,1|32,18,1|32,18,2|32,18,3|32,18,4|32,18,5|32,18,6|32,18,7|32,18,8".split("|").map(s=>"2,8,18,"+s))
+.concat("18,8,1|18,8,2|18,9,2|18,10,2|20,9,2|21,9,2|22,9,2|24,8,2|25,8,2|25,9,2|27,8,2|28,8,2|29,8,2|30,8,2|31,8,2|32,8,2|32,8,3|32,10,2|32,11,2|32,12,2|32,13,2|32,14,2|32,15,2|32,16,2|32,17,2|32,18,2|32,18,3|32,18,4|32,18,5|32,18,6|32,18,7|32,18,8".split("|").map(s=>"2,8,18,32,"+s));
+function posOf(z){
+  const ends=[2,10,18,36,54,86,118],starts=[1,3,11,19,37,55,87];
+  let p=0;while(z>ends[p])p++;const i=z-starts[p];p++;
+  if(p===1)return{period:1,group:z===1?1:18};
+  if(p<=3)return{period:p,group:i<2?i+1:i+11};
+  if(p<=5)return{period:p,group:i+1};
+  if(i<2)return{period:p,group:i+1};
+  if(i<=16)return{period:p,group:null,f:i-2};
+  return{period:p,group:i-13};
+}
+const EL=RAW.map((r,k)=>{const z=k+1,ps=posOf(z);const o={z,sym:r[0],de:r[1],en:r[2],mass:r[3],A:r[4],cat:r[5],shells:SH[k].split(",").map(Number),period:ps.period,group:ps.group};
+  if(ps.group===null){o.row=ps.period===6?10:11;o.col=ps.f+4;}else{o.row=ps.period+1;o.col=ps.group+1;}return o;});
+const T={de:{
+navIntro:"Start",navAtom:"Atome",navBuild:"Baukasten",navTable:"Periodensystem",navRows:"Reihen",navCols:"Spalten",navQuiz:"Quiz",
+heroKicker:"Eine Forschungsreise für Johann",heroTitle:"Johanns Reise ins Periodensystem",
+heroText:"Hallo Johann! 👋 Alles um dich herum – dein Tisch, die Luft, dein Lieblingsessen und sogar du selbst – ist aus winzig kleinen Bausteinen gemacht: den <b>Atomen</b>. Es gibt nur 118 verschiedene Sorten davon. Jede Sorte heißt <b>Element</b>. Heute findest du heraus, wie Atome gebaut sind und wie das berühmte <b>Periodensystem</b> funktioniert.",
+heroBtn:"Los geht's! 🚀",
+whatTitle:"Was ist ein Atom, was ist ein Element?",
+whatText:"Atome sind sooo klein, dass etwa <b>eine Million</b> nebeneinander auf die Breite eines Haares passen. Ein <b>Element</b> ist ein Stoff, der nur aus einer einzigen Sorte Atome besteht – zum Beispiel Gold, Sauerstoff oder Eisen.",
+c1t:"🧱 Bausteine",c1:"Wie bei LEGO: Aus wenigen Atomsorten wird einfach alles gebaut.",
+c2t:"🔢 118 Elemente",c2:"Ungefähr 90 davon gibt es in der Natur, den Rest haben Forscher im Labor hergestellt.",
+c3t:"💧 Verbindungen",c3:"Wasser ist H₂O: 2 Wasserstoff-Atome + 1 Sauerstoff-Atom halten zusammen.",
+atomTitle:"Woraus besteht ein Atom?",
+atomLead:"Ein Atom ist wie ein Mini-Sonnensystem: In der Mitte sitzt der <b>Atomkern</b>, und drumherum flitzen die <b>Elektronen</b> auf ihren <b>Schalen</b>.",
+pTitle:"Proton",pText:"Sitzt im Kern. <b>Positiv</b> geladen (+). Die Anzahl der Protonen bestimmt, welches Element es ist – das ist die <b>Ordnungszahl</b>!",
+nTitle:"Neutron",nText:"Sitzt auch im Kern. Hat <b>keine</b> Ladung (0). Neutronen helfen wie Kleber, den Kern zusammenzuhalten.",
+eTitle:"Elektron",eText:"Winzig und superschnell. <b>Negativ</b> geladen (−). Elektronen sausen auf Schalen um den Kern.",
+shTitle:"Elektronenschalen",shText:"Die Schalen sind wie Stockwerke: Auf die 1. Schale passen <b>2</b> Elektronen, auf die 2. Schale <b>8</b>, auf die 3. Schale (fürs Erste) auch <b>8</b>. Erst wenn eine Schale voll ist, kommt die nächste dran. (Bei großen Atomen passen auf die inneren Schalen später noch mehr: 18 oder sogar 32.)",
+chargeNote:"➕ und ➖ ziehen sich an – darum bleiben die Elektronen beim Kern. Hat ein Atom gleich viele Protonen wie Elektronen, ist es <b>neutral</b>. Sonst nennt man es <b>Ion</b>.",
+demoLabel:"Lithium: 3 Protonen, 4 Neutronen, 3 Elektronen",
+buildTitle:"Atom-Baukasten 🔬",buildLead:"Johann, jetzt bist du dran! Füge Protonen, Neutronen und Elektronen hinzu und schau, welches Atom entsteht.",
+protons:"Protonen",neutrons:"Neutronen",electrons:"Elektronen",
+noElement:"Noch kein Element – ein Atom braucht mindestens 1 Proton!",
+charge:"Ladung",neutral:"neutral ✔",posIon:"positives Ion",negIon:"negatives Ion",massNo:"Massenzahl (Protonen + Neutronen)",
+common:"✔ So kommt {name} in der Natur am häufigsten vor!",commonR:"✔ Das ist die stabilste Sorte von {name} (es ist trotzdem radioaktiv).",
+isotope:"Ein <b>Isotop</b>: gleiches Element, andere Anzahl Neutronen. Manche Isotope sind radioaktiv. (Am häufigsten: {n} Neutronen)",
+unstable:"Hmm, so ein Kern würde sofort zerfallen – probier eine andere Neutronenzahl (am häufigsten: {n}).",
+reset:"Zurücksetzen",makeNeutral:"Neutral machen",makeCommon:"Passende Neutronen",
+missionsTitle:"🎯 Missionen",
+m0:"Baue ein Helium-Atom: 2 Protonen, 2 Neutronen, 2 Elektronen.",m1:"Baue ein neutrales Kohlenstoff-Atom, so wie es meistens vorkommt.",m2:"Baue ein Natrium-Ion mit der Ladung +1 (häufigste Neutronenzahl).",m3:"Baue ein neutrales Sauerstoff-Atom mit 8 Neutronen.",
+missionDone:"🎉 Mission geschafft!",allMissions:"🏅 Alle Missionen geschafft – du bist ein echter Atom-Baumeister, Johann!",
+tableTitle:"Das Periodensystem 🧪",tableLead:"Hier sind alle 118 Elemente, sortiert nach der Anzahl ihrer Protonen. <b>Tippe auf ein Element</b>, um sein Atom zu sehen! Tippe auf eine Farbe in der Legende, um eine Element-Familie leuchten zu lassen.",
+fRowNote:"Die zwei Reihen unten gehören eigentlich in Periode 6 und 7 – sie stehen nur unten, damit die Tabelle nicht zu breit wird.",
+am:"Alkalimetalle",ae:"Erdalkalimetalle",tm:"Übergangsmetalle",pt:"andere Metalle",md:"Halbmetalle",nm:"Nichtmetalle",hl:"Halogene",ng:"Edelgase",la:"Lanthanoide",ac:"Actinoide",
+atomicNo:"Ordnungszahl",massL:"Atommasse (ca.)",periodL:"Periode",groupL:"Gruppe",shellsL:"Elektronen pro Schale",factL:"Wusstest du?",catL:"Familie",
+massNote:"Zahl in Klammern: Masse der stabilsten Sorte – dieses Element ist radioaktiv.",neutronNote:"Neutronen in der häufigsten (bzw. stabilsten) Sorte.",
+predicted:"Von so schweren Elementen gab es bisher nur ein paar Atome – einige Angaben sind deshalb nur vorhergesagt.",
+close:"Schließen ✕",fGroup:"–",
+rowsTitle:"Die Reihen: Perioden ↔️",rowsLead:"Eine waagerechte Reihe heißt <b>Periode</b>. Das Coole: Die Nummer der Periode verrät dir, <b>wie viele Elektronenschalen</b> die Atome haben! Tippe auf eine Periode.",
+periodBtn:"Periode",
+rowsInfo:"<b>Periode {p}:</b> Alle Atome in dieser Reihe haben <b>{p} Elektronenschale{pl}</b>. Von links nach rechts kommt immer ein Proton und ein Elektron dazu – bis die äußere Schale voll ist. Dann beginnt die nächste Reihe mit einer neuen Schale.",
+rowsCompare:"{a} und {b} stehen beide in Periode {p} – zähl mal die Ringe!",plural:"n",
+colsTitle:"Die Spalten: Gruppen ↕️",colsLead:"Eine senkrechte Spalte heißt <b>Gruppe</b>. Elemente in derselben Gruppe haben gleich viele Elektronen auf der <b>äußersten Schale</b> – und darum benehmen sie sich ähnlich, wie Geschwister! Tippe auf eine Gruppe.",
+groupBtn:"Gruppe",outer:"Außenelektronen: <b>{n}</b>",outerTm:"Außenelektronen: meist <b>2</b> (manchmal 1) – die Übergangsmetalle sind etwas komplizierter.",
+colsCompare:"{a} und {b} sind in derselben Gruppe – die <span class='yl'>gelben</span> Außen-Elektronen sind gleich viele!",
+g1n:"Alkalimetalle",g1:"Nur <b>1 Außenelektron</b> – und das wollen sie unbedingt loswerden! Darum reagieren sie wild mit Wasser: Natrium flitzt zischend über das Wasser, Kalium brennt sogar mit lila Flamme. (Wasserstoff steht auch ganz oben in dieser Spalte, ist aber ein Gas und kein Metall.)",
+g2n:"Erdalkalimetalle",g2:"<b>2 Außenelektronen</b>. Sie reagieren auch gern, aber ruhiger als die Alkalimetalle. Calcium steckt in deinen Knochen, Magnesium in Wunderkerzen.",
+g13n:"Borgruppe",g13:"<b>3 Außenelektronen</b>. Hier wohnt Aluminium – daraus sind Getränkedosen und Alufolie.",
+g14n:"Kohlenstoffgruppe",g14:"<b>4 Außenelektronen</b>. Diese Atome können sich mit ganz vielen Partnern verbinden: Kohlenstoff baut alles Leben, Silicium steckt in Computerchips.",
+g15n:"Stickstoffgruppe",g15:"<b>5 Außenelektronen</b>. Stickstoff ist in der Luft, Phosphor in deinen Knochen.",
+g16n:"Sauerstoffgruppe",g16:"<b>6 Außenelektronen</b>. Ihnen fehlen 2 bis zur vollen Schale – Sauerstoff schnappt sich gern Elektronen, zum Beispiel beim Rosten und beim Feuer.",
+g17n:"Halogene",g17:"<b>7 Außenelektronen</b> – nur EINS fehlt zur vollen Schale! Darum sind sie super reaktionsfreudig. Chlor + Natrium = Kochsalz. „Halogen“ heißt übrigens „Salzbildner“.",
+g18n:"Edelgase",g18:"Ihre äußere Schale ist <b>voll</b> (8 Elektronen, bei Helium 2). Sie sind total zufrieden und reagieren fast nie – die Faulpelze des Periodensystems! 😴 Dafür leuchten sie toll in Lampen.",
+gTmn:"Übergangsmetalle",gTm:"Die Gruppen 3 bis 12 sind die <b>Übergangsmetalle</b>: Eisen, Kupfer, Silber, Gold … Meistens harte, glänzende Metalle, die Strom gut leiten.",
+s1:"Natrium + Wasser = Zisch! 💥",s17:"Natrium + Chlor = Kochsalz 🧂",s18:"Edelgase: Zzz… keine Lust auf Reaktionen",s2:"Calcium = starke Knochen 🦴",s14:"Kohlenstoff = Leben 🌱 · Silicium = Computer 💻",sTm:"Metalle glänzen und leiten Strom ⚡",s13:"Aluminium = Dosen & Folie 🥫",s15:"Stickstoff = 78 % der Luft 🌬️",s16:"Sauerstoff = Atmen & Feuer 🔥",
+quizTitle:"Das große Johann-Quiz 🏆",quizLead:"Zeig, was du gelernt hast! 10 Fragen – manche beantwortest du mit einem Knopf, bei anderen tippst du das richtige Element im Periodensystem an.",
+qStart:"Quiz starten",qOf:"Frage {i} von {n}",qScore:"Punkte: {s}",right:"Richtig! 🎉",wrong:"Leider nicht ganz.",youClicked:"Du hast {name} angetippt.",
+nextQ:"Weiter ➜",finish:"Ergebnis ansehen 🏁",resultTitle:"Geschafft, Johann!",result:"Du hast <b>{s} von {n}</b> Fragen richtig!",
+r3:"Wahnsinn – du bist ein echter Chemie-Profi! 🧑‍🔬",r2:"Super gemacht! Fast alles gewusst. 💪",r1:"Guter Anfang! Schau dir die Abschnitte nochmal an und versuch es gleich nochmal. 🙂",
+restart:"Nochmal spielen 🔄",tapTable:"👇 Tippe im Periodensystem auf die richtige Antwort:",
+footer:"Gemacht für Johann ❤️ · Funktioniert auch ohne Internet.",
+gen_am:"{n} ist ein Alkalimetall: weich und sehr reaktionsfreudig – mit Wasser reagiert es heftig.",gen_ae:"{n} ist ein Erdalkalimetall: ein Metall, das gern reagiert, aber ruhiger als die Alkalimetalle.",gen_tm:"{n} ist ein Übergangsmetall – meistens hart, glänzend und ein guter Stromleiter.",gen_pt:"{n} ist ein Metall aus dem rechten Teil des Periodensystems, oft eher weich.",gen_md:"{n} ist ein Halbmetall – halb Metall, halb Nichtmetall. Solche Stoffe sind wichtig für Elektronik.",gen_nm:"{n} ist ein Nichtmetall.",gen_hl:"{n} ist ein Halogen: Ihm fehlt nur 1 Elektron zur vollen Schale, deshalb ist es sehr reaktionsfreudig.",gen_ng:"{n} ist ein Edelgas – volle Außenschale, darum reagiert es fast nie.",gen_la:"{n} gehört zu den „Seltenen Erden“. Solche Metalle stecken z. B. in starken Magneten, Bildschirmen und Elektroautos.",gen_ac:"{n} ist ein Actinoid – alle Actinoide sind radioaktiv.",
+synth:"Es kommt nicht in der Natur vor, sondern wird im Labor hergestellt."
+},en:{
+navIntro:"Start",navAtom:"Atoms",navBuild:"Builder",navTable:"Periodic table",navRows:"Rows",navCols:"Columns",navQuiz:"Quiz",
+heroKicker:"An expedition for Johann",heroTitle:"Johann's Journey into the Periodic Table",
+heroText:"Hi Johann! 👋 Everything around you – your desk, the air, your favourite food and even you – is made of tiny building blocks called <b>atoms</b>. There are only 118 different kinds of them. Each kind is called an <b>element</b>. Today you'll find out how atoms are built and how the famous <b>periodic table</b> works.",
+heroBtn:"Let's go! 🚀",
+whatTitle:"What is an atom, what is an element?",
+whatText:"Atoms are sooo small that about <b>one million</b> of them fit side by side across the width of a hair. An <b>element</b> is a substance made of only one kind of atom – for example gold, oxygen or iron.",
+c1t:"🧱 Building blocks",c1:"Just like LEGO: a few kinds of atoms build absolutely everything.",
+c2t:"🔢 118 elements",c2:"About 90 of them exist in nature; scientists made the rest in laboratories.",
+c3t:"💧 Compounds",c3:"Water is H₂O: 2 hydrogen atoms + 1 oxygen atom stick together.",
+atomTitle:"What is an atom made of?",
+atomLead:"An atom is like a mini solar system: in the middle sits the <b>nucleus</b>, and around it the <b>electrons</b> zoom along their <b>shells</b>.",
+pTitle:"Proton",pText:"Lives in the nucleus. <b>Positive</b> charge (+). The number of protons decides which element it is – that's the <b>atomic number</b>!",
+nTitle:"Neutron",nText:"Also lives in the nucleus. Has <b>no</b> charge (0). Neutrons act like glue that helps hold the nucleus together.",
+eTitle:"Electron",eText:"Tiny and super fast. <b>Negative</b> charge (−). Electrons zoom around the nucleus on shells.",
+shTitle:"Electron shells",shText:"Shells are like floors of a building: the 1st shell holds <b>2</b> electrons, the 2nd shell <b>8</b>, and the 3rd shell (for now) also <b>8</b>. Only when one shell is full does the next one start. (In big atoms the inner shells can later hold even more: 18 or even 32.)",
+chargeNote:"➕ and ➖ attract each other – that's why electrons stay near the nucleus. If an atom has as many protons as electrons, it is <b>neutral</b>. Otherwise it's called an <b>ion</b>.",
+demoLabel:"Lithium: 3 protons, 4 neutrons, 3 electrons",
+buildTitle:"Atom Builder 🔬",buildLead:"Johann, your turn! Add protons, neutrons and electrons and see which atom you get.",
+protons:"Protons",neutrons:"Neutrons",electrons:"Electrons",
+noElement:"No element yet – an atom needs at least 1 proton!",
+charge:"Charge",neutral:"neutral ✔",posIon:"positive ion",negIon:"negative ion",massNo:"Mass number (protons + neutrons)",
+common:"✔ This is the most common form of {name} in nature!",commonR:"✔ This is the most stable form of {name} (it is still radioactive).",
+isotope:"An <b>isotope</b>: same element, different number of neutrons. Some isotopes are radioactive. (Most common: {n} neutrons)",
+unstable:"Hmm, a nucleus like that would fall apart right away – try another number of neutrons (most common: {n}).",
+reset:"Reset",makeNeutral:"Make neutral",makeCommon:"Matching neutrons",
+missionsTitle:"🎯 Missions",
+m0:"Build a helium atom: 2 protons, 2 neutrons, 2 electrons.",m1:"Build a neutral carbon atom, the way it is most common.",m2:"Build a sodium ion with charge +1 (most common number of neutrons).",m3:"Build a neutral oxygen atom with 8 neutrons.",
+missionDone:"🎉 Mission complete!",allMissions:"🏅 All missions complete – you're a real atom builder, Johann!",
+tableTitle:"The Periodic Table 🧪",tableLead:"Here are all 118 elements, sorted by their number of protons. <b>Tap an element</b> to see its atom! Tap a colour in the legend to make an element family light up.",
+fRowNote:"The two rows at the bottom actually belong in periods 6 and 7 – they are only placed below so the table isn't too wide.",
+am:"Alkali metals",ae:"Alkaline earth metals",tm:"Transition metals",pt:"Other metals",md:"Metalloids",nm:"Nonmetals",hl:"Halogens",ng:"Noble gases",la:"Lanthanides",ac:"Actinides",
+atomicNo:"Atomic number",massL:"Atomic mass (approx.)",periodL:"Period",groupL:"Group",shellsL:"Electrons per shell",factL:"Did you know?",catL:"Family",
+massNote:"Number in brackets: mass of the most stable form – this element is radioactive.",neutronNote:"Neutrons in the most common (or most stable) form.",
+predicted:"Only a few atoms of such heavy elements have ever been made – so some details are only predicted.",
+close:"Close ✕",fGroup:"–",
+rowsTitle:"The rows: periods ↔️",rowsLead:"A horizontal row is called a <b>period</b>. The cool part: the period number tells you <b>how many electron shells</b> the atoms have! Tap a period.",
+periodBtn:"Period",
+rowsInfo:"<b>Period {p}:</b> All atoms in this row have <b>{p} electron shell{pl}</b>. From left to right, one more proton and one more electron are added each time – until the outer shell is full. Then the next row starts with a new shell.",
+rowsCompare:"{a} and {b} are both in period {p} – count the rings!",plural:"s",
+colsTitle:"The columns: groups ↕️",colsLead:"A vertical column is called a <b>group</b>. Elements in the same group have the same number of electrons on their <b>outermost shell</b> – that's why they behave alike, like siblings! Tap a group.",
+groupBtn:"Group",outer:"Outer electrons: <b>{n}</b>",outerTm:"Outer electrons: usually <b>2</b> (sometimes 1) – transition metals are a bit more complicated.",
+colsCompare:"{a} and {b} are in the same group – they have the same number of <span class='yl'>yellow</span> outer electrons!",
+g1n:"Alkali metals",g1:"Only <b>1 outer electron</b> – and they really want to get rid of it! That's why they react wildly with water: sodium zips around fizzing on the water, potassium even burns with a purple flame. (Hydrogen also sits at the top of this column, but it's a gas, not a metal.)",
+g2n:"Alkaline earth metals",g2:"<b>2 outer electrons</b>. They like to react too, but more calmly than the alkali metals. Calcium is in your bones, magnesium in sparklers.",
+g13n:"Boron group",g13:"<b>3 outer electrons</b>. Aluminium lives here – drink cans and foil are made of it.",
+g14n:"Carbon group",g14:"<b>4 outer electrons</b>. These atoms can bond with lots of partners: carbon builds all living things, silicon is in computer chips.",
+g15n:"Nitrogen group",g15:"<b>5 outer electrons</b>. Nitrogen is in the air, phosphorus in your bones.",
+g16n:"Oxygen group",g16:"<b>6 outer electrons</b>. They are 2 short of a full shell – oxygen loves to grab electrons, for example when things rust or burn.",
+g17n:"Halogens",g17:"<b>7 outer electrons</b> – only ONE missing for a full shell! That makes them super reactive. Chlorine + sodium = table salt. \"Halogen\" actually means \"salt maker\".",
+g18n:"Noble gases",g18:"Their outer shell is <b>full</b> (8 electrons, helium has 2). They are totally happy and almost never react – the couch potatoes of the periodic table! 😴 But they glow beautifully in lamps.",
+gTmn:"Transition metals",gTm:"Groups 3 to 12 are the <b>transition metals</b>: iron, copper, silver, gold … Mostly hard, shiny metals that conduct electricity well.",
+s1:"Sodium + water = fizz! 💥",s17:"Sodium + chlorine = table salt 🧂",s18:"Noble gases: Zzz… not in the mood to react",s2:"Calcium = strong bones 🦴",s14:"Carbon = life 🌱 · Silicon = computers 💻",sTm:"Metals shine and conduct electricity ⚡",s13:"Aluminium = cans & foil 🥫",s15:"Nitrogen = 78% of the air 🌬️",s16:"Oxygen = breathing & fire 🔥",
+quizTitle:"The Big Johann Quiz 🏆",quizLead:"Show what you've learned! 10 questions – some you answer with a button, for others you tap the right element in the periodic table.",
+qStart:"Start quiz",qOf:"Question {i} of {n}",qScore:"Score: {s}",right:"Correct! 🎉",wrong:"Not quite.",youClicked:"You tapped {name}.",
+nextQ:"Next ➜",finish:"See result 🏁",resultTitle:"Well done, Johann!",result:"You got <b>{s} out of {n}</b> questions right!",
+r3:"Amazing – you're a real chemistry pro! 🧑‍🔬",r2:"Great job! You knew almost everything. 💪",r1:"Good start! Have another look at the sections and try again. 🙂",
+restart:"Play again 🔄",tapTable:"👇 Tap the right answer in the periodic table:",
+footer:"Made for Johann ❤️ · Works without internet, too.",
+gen_am:"{n} is an alkali metal: soft and very reactive – it reacts violently with water.",gen_ae:"{n} is an alkaline earth metal: a metal that likes to react, but more calmly than the alkali metals.",gen_tm:"{n} is a transition metal – usually hard, shiny and good at conducting electricity.",gen_pt:"{n} is a metal from the right-hand part of the periodic table, often fairly soft.",gen_md:"{n} is a metalloid – half metal, half nonmetal. Materials like this are important for electronics.",gen_nm:"{n} is a nonmetal.",gen_hl:"{n} is a halogen: it's just 1 electron short of a full shell, so it is very reactive.",gen_ng:"{n} is a noble gas – full outer shell, so it hardly ever reacts.",gen_la:"{n} is one of the \"rare earths\". Metals like this are used in strong magnets, screens and electric cars.",gen_ac:"{n} is an actinide – all actinides are radioactive.",
+synth:"It doesn't occur in nature; it is made in laboratories."
+}};
+const FACTS={
+H:["Wasserstoff ist das leichteste und häufigste Element im ganzen Universum – die Sonne besteht größtenteils daraus!","Hydrogen is the lightest and most common element in the whole universe – the Sun is mostly made of it!"],
+He:["Helium lässt Luftballons schweben und macht deine Stimme ganz piepsig!","Helium makes balloons float and makes your voice sound squeaky!"],
+Li:["Lithium steckt in den Akkus von Handys, Tablets und E-Autos. Es ist das leichteste Metall – es schwimmt sogar auf Öl!","Lithium is in the batteries of phones, tablets and electric cars. It's the lightest metal – it even floats on oil!"],
+Be:["Beryllium ist leicht und sehr steif – die goldenen Spiegel des James-Webb-Weltraumteleskops sind daraus gemacht.","Beryllium is light and very stiff – the golden mirrors of the James Webb Space Telescope are made of it."],
+B:["Bor steckt in hitzefestem Glas, und eine Bor-Verbindung (Borax) wird manchmal für Bastel-Schleim benutzt.","Boron is in heat-proof glass, and a boron compound (borax) is sometimes used to make slime."],
+C:["Diamanten und Bleistiftminen sind beide aus reinem Kohlenstoff – nur anders angeordnet! Außerdem ist Kohlenstoff der Baustein allen Lebens.","Diamonds and pencil lead are both pure carbon – just arranged differently! Carbon is also the building block of all life."],
+N:["Etwa 78 % der Luft, die du atmest, ist Stickstoff.","About 78% of the air you breathe is nitrogen."],
+O:["Sauerstoff brauchst du bei jedem Atemzug – und er steckt auch im Wasser (H₂O).","You need oxygen with every breath – and it's also in water (H₂O)."],
+F:["Fluor steckt als Fluorid in Zahnpasta und macht deine Zähne härter.","Fluorine (as fluoride) is in toothpaste and makes your teeth stronger."],
+Ne:["Neon leuchtet in Leuchtreklamen knallig rot-orange.","Neon glows bright red-orange in neon signs."],
+Na:["Natrium ist ein so weiches Metall, dass man es mit einem Messer schneiden kann. Zusammen mit Chlor wird daraus Kochsalz!","Sodium is so soft you can cut it with a knife. Together with chlorine it becomes table salt!"],
+Mg:["Magnesium brennt mit einem gleißend hellen weißen Licht – darum steckt es in Wunderkerzen und Feuerwerk.","Magnesium burns with a dazzling white light – that's why it's used in sparklers and fireworks."],
+Al:["Alufolie und Getränkedosen sind aus Aluminium – dem häufigsten Metall in der Erdkruste.","Foil and drink cans are made of aluminium – the most common metal in the Earth's crust."],
+Si:["Silicium steckt im Sand am Strand – und in jedem Computerchip!","Silicon is in beach sand – and in every computer chip!"],
+P:["Phosphor steckt in deinen Knochen und Zähnen. Und die Reibefläche einer Streichholzschachtel enthält roten Phosphor.","Phosphorus is in your bones and teeth. And the striking strip on a matchbox contains red phosphorus."],
+S:["Schwefel ist gelb. Der Gestank fauler Eier kommt von einer Schwefel-Verbindung – und Vulkane pusten viel davon aus.","Sulfur is yellow. The stink of rotten eggs comes from a sulfur compound – and volcanoes puff out lots of it."],
+Cl:["Chlor hält das Schwimmbadwasser sauber – daher kommt der typische Schwimmbad-Geruch.","Chlorine keeps swimming pool water clean – that's the typical pool smell."],
+Ar:["Argon ist das häufigste Edelgas in der Luft – fast 1 % von jedem Atemzug.","Argon is the most common noble gas in the air – almost 1% of every breath."],
+K:["Bananen enthalten viel Kalium. Reines Kalium reagiert so heftig mit Wasser, dass es mit lila Flamme brennt!","Bananas contain lots of potassium. Pure potassium reacts so violently with water that it burns with a purple flame!"],
+Ca:["Calcium macht deine Knochen und Zähne hart – Milch und Käse enthalten viel davon.","Calcium makes your bones and teeth hard – milk and cheese contain lots of it."],
+Ti:["Titan ist so stark wie Stahl, aber fast nur halb so schwer – es steckt in Flugzeugen und künstlichen Gelenken.","Titanium is as strong as steel but only about half as heavy – it's used in planes and artificial joints."],
+Cr:["Chrom macht Fahrradteile und Wasserhähne spiegelblank.","Chromium makes bike parts and taps mirror-shiny."],
+Fe:["Dein Blut ist rot wegen Eisen – und der Erdkern besteht größtenteils aus Eisen.","Your blood is red because of iron – and the Earth's core is mostly iron."],
+Co:["Cobalt färbt Glas wunderschön tiefblau.","Cobalt colours glass a beautiful deep blue."],
+Ni:["Die 1- und 2-Euro-Münzen enthalten Nickel.","1 and 2 euro coins contain nickel."],
+Cu:["Die Freiheitsstatue in New York ist aus Kupfer. Sie ist grün, weil Kupfer an der Luft eine grüne Schicht (Patina) bildet.","The Statue of Liberty is made of copper. It's green because copper forms a green layer (patina) in air."],
+Zn:["Zink schützt Eisen vor Rost – verzinkte Zäune und Nägel sind damit überzogen.","Zinc protects iron from rust – galvanised fences and nails are coated with it."],
+Ga:["Gallium schmilzt schon in deiner Hand, weil es bei ungefähr 30 °C flüssig wird!","Gallium melts in your hand because it turns liquid at about 30 °C!"],
+Br:["Brom ist eines von nur zwei Elementen, die bei Zimmertemperatur flüssig sind. Das andere ist Quecksilber.","Bromine is one of only two elements that are liquid at room temperature. The other is mercury."],
+Kr:["Supermans Kryptonit ist erfunden – aber Krypton gibt es wirklich: ein Edelgas, das in manchen Lampen leuchtet.","Superman's kryptonite is made up – but krypton is real: a noble gas that glows in some lamps."],
+Ag:["Silber leitet Strom und Wärme besser als jedes andere Metall.","Silver conducts electricity and heat better than any other metal."],
+Sn:["Wenn man einen Zinnstab biegt, knistert er leise – das nennt man „Zinngeschrei“!","When you bend a tin bar, it makes a crackling sound – called the \"tin cry\"!"],
+I:["Iod braucht dein Körper für die Schilddrüse – deshalb wird es oft ins Speisesalz gemischt.","Your body needs iodine for your thyroid – that's why it's often added to table salt."],
+Cs:["Caesium tickt in Atomuhren, den genauesten Uhren der Welt.","Caesium ticks inside atomic clocks, the most accurate clocks in the world."],
+Nd:["Neodym-Magnete sind die stärksten Dauermagnete – sie stecken in Kopfhörern und Elektromotoren.","Neodymium magnets are the strongest permanent magnets – they're in headphones and electric motors."],
+W:["Wolfram hat den höchsten Schmelzpunkt aller Metalle (über 3400 °C) – darum glühte es in alten Glühbirnen.","Tungsten has the highest melting point of all metals (over 3400 °C) – that's why it glowed in old light bulbs."],
+Pt:["Platin ist noch seltener als Gold und steckt im Katalysator von Autos.","Platinum is even rarer than gold and is used in car catalytic converters."],
+Au:["Gold rostet nie – darum glänzen uralte Goldschätze heute noch. Alles Gold, das je gefördert wurde, würde in einen Würfel von nur etwa 22 Metern Kantenlänge passen!","Gold never rusts – that's why ancient treasures still shine today. All the gold ever mined would fit in a cube only about 22 metres on each side!"],
+Hg:["Quecksilber ist das einzige Metall, das bei Zimmertemperatur flüssig ist. Aber Vorsicht: Es ist giftig!","Mercury is the only metal that is liquid at room temperature. But careful: it's poisonous!"],
+Pb:["Blei ist schwer und weich. Früher war es in Wasserrohren und Farben – bis man merkte, wie giftig es ist.","Lead is heavy and soft. It used to be in water pipes and paint – until people realised how poisonous it is."],
+Rn:["Radon ist ein unsichtbares, radioaktives Gas, das aus dem Boden kommen kann.","Radon is an invisible radioactive gas that can seep out of the ground."],
+Ra:["Radium leuchtet im Dunkeln schwach bläulich. Marie Curie hat es entdeckt.","Radium glows faintly blue in the dark. Marie Curie discovered it."],
+U:["Uran ist radioaktiv. Ein Uran-Brennstoffstückchen, so klein wie ein Gummibärchen, liefert im Kraftwerk so viel Energie wie etwa eine Tonne Kohle!","Uranium is radioactive. A fuel pellet the size of a gummy bear gives as much energy in a power plant as about a tonne of coal!"],
+Pu:["Plutonium liefert Strom für Raumsonden wie Voyager – sie fliegen seit fast 50 Jahren durchs All.","Plutonium powers space probes like Voyager – they have been flying through space for almost 50 years."],
+Es:["Einsteinium ist nach Albert Einstein benannt.","Einsteinium is named after Albert Einstein."],
+Ds:["Darmstadtium wurde in Darmstadt in Deutschland entdeckt und nach der Stadt benannt.","Darmstadtium was discovered in Darmstadt, Germany, and named after the city."],
+Og:["Oganesson ist das schwerste Element, das je hergestellt wurde – es gab bisher nur ganz wenige Atome davon.","Oganesson is the heaviest element ever made – only a handful of atoms have ever existed."]
+};
+const GROUP_PAIRS={1:["Li","Na"],2:["Be","Mg"],13:["B","Al"],14:["C","Si"],15:["N","P"],16:["O","S"],17:["F","Cl"],18:["Ne","Ar"]};
+const PERIOD_PAIRS={1:["H","He"],2:["Li","Ne"],3:["Na","Ar"],4:["K","Kr"],5:["Rb","Xe"],6:["Cs","Rn"],7:["Fr","Og"]};
+const QUIZ=[
+{type:"mc",de:{q:"Welche Ladung hat ein Proton?",o:["Positiv (+)","Negativ (−)","Gar keine"],x:"Protonen sind positiv, Elektronen negativ, Neutronen haben keine Ladung."},en:{q:"What charge does a proton have?",o:["Positive (+)","Negative (−)","None at all"],x:"Protons are positive, electrons negative, neutrons have no charge."},a:0},
+{type:"mc",de:{q:"Wo sind die Elektronen?",o:["Auf Schalen um den Kern","Mitten im Kern","Außerhalb vom Atom"],x:"Elektronen sausen auf Schalen um den Kern herum."},en:{q:"Where are the electrons?",o:["On shells around the nucleus","Right inside the nucleus","Outside the atom"],x:"Electrons zoom around the nucleus on shells."},a:0},
+{type:"click",de:{q:"Finde Sauerstoff (O)!",x:"Sauerstoff hat die Ordnungszahl 8."},en:{q:"Find oxygen (O)!",x:"Oxygen has atomic number 8."},ok:e=>e.z===8,show:[8]},
+{type:"mc",de:{q:"Was verrät dir die Ordnungszahl?",o:["Wie viele Protonen das Atom hat","Wie viele Neutronen das Atom hat","Wie alt das Element ist"],x:"Ordnungszahl = Anzahl der Protonen. Sie bestimmt das Element."},en:{q:"What does the atomic number tell you?",o:["How many protons the atom has","How many neutrons the atom has","How old the element is"],x:"Atomic number = number of protons. It decides the element."},a:0},
+{type:"click",de:{q:"Tippe auf ein Edelgas – die Faulpelze, die fast nie reagieren!",x:"Die Edelgase stehen ganz rechts in Gruppe 18."},en:{q:"Tap a noble gas – the couch potatoes that almost never react!",x:"The noble gases are on the far right in group 18."},ok:e=>e.group===18,show:[2,10,18,36,54,86,118]},
+{type:"mc",de:{q:"Ein Atom steht in Periode 3. Wie viele Elektronenschalen hat es?",o:["3","8","1"],x:"Periodennummer = Anzahl der Elektronenschalen."},en:{q:"An atom is in period 3. How many electron shells does it have?",o:["3","8","1"],x:"Period number = number of electron shells."},a:0},
+{type:"click",de:{q:"Tippe auf das Element mit 6 Protonen.",x:"6 Protonen = Ordnungszahl 6 = Kohlenstoff (C)."},en:{q:"Tap the element with 6 protons.",x:"6 protons = atomic number 6 = carbon (C)."},ok:e=>e.z===6,show:[6]},
+{type:"mc",de:{q:"Warum benehmen sich Natrium und Kalium so ähnlich?",o:["Sie haben gleich viele Außenelektronen (1)","Sie sind gleich schwer","Sie haben die gleiche Farbe"],x:"Beide stehen in Gruppe 1 und haben 1 Außenelektron."},en:{q:"Why do sodium and potassium behave so similarly?",o:["They have the same number of outer electrons (1)","They weigh the same","They are the same colour"],x:"Both are in group 1 and have 1 outer electron."},a:0},
+{type:"click",de:{q:"Tippe auf ein Alkalimetall – die, die mit Wasser explodieren!",x:"Alkalimetalle: Li, Na, K, Rb, Cs, Fr in Gruppe 1 (aber nicht Wasserstoff)."},en:{q:"Tap an alkali metal – the ones that explode in water!",x:"Alkali metals: Li, Na, K, Rb, Cs, Fr in group 1 (but not hydrogen)."},ok:e=>e.cat==="am",show:[3,11,19,37,55,87]},
+{type:"mc",de:{q:"Welches Metall ist bei Zimmertemperatur flüssig?",o:["Quecksilber","Eisen","Gold"],x:"Quecksilber (Hg) ist flüssig – aber giftig!"},en:{q:"Which metal is liquid at room temperature?",o:["Mercury","Iron","Gold"],x:"Mercury (Hg) is liquid – but poisonous!"},a:0}
+];
+// ---------- helpers
+const $=s=>document.querySelector(s);
+const store=(()=>{try{const k="__t";localStorage.setItem(k,1);localStorage.removeItem(k);return localStorage}catch(e){return null}})();
+let lang=(store&&store.getItem("johann-lang"))||"de";
+const t=k=>(T[lang][k]!==undefined?T[lang][k]:(T.de[k]!==undefined?T.de[k]:k));
+const fmt=(s,o)=>s.replace(/\{(\w+)\}/g,(m,k)=>o[k]!==undefined?o[k]:m);
+const nm=e=>lang==="de"?e.de:e.en;
+const bySym={};EL.forEach(e=>bySym[e.sym]=e);
+const massTxt=m=>lang==="de"?m.replace(".",","):m;
+
+// ---------- Bohr model SVG (SMIL rotation = works in Safari/iPad too)
+function bohrSVG(shells,p,n,opt){
+  opt=opt||{};const N=shells.length,c=150,tot=p+n;
+  const nucR=tot?Math.min(34,9+Math.sqrt(tot)*2.4):0;
+  const r0=Math.max(nucR+16,38),rMax=142;
+  const step=N>1?Math.min(34,(rMax-r0)/(N-1)):0;
+  let s='<svg class="bohr" viewBox="0 0 300 300" role="img" aria-label="Bohr">';
+  if(opt.title)s+='<title>'+opt.title+'</title>';
+  shells.forEach((cnt,i)=>{
+    const r=N===1?r0+12:r0+i*step;
+    s+='<circle class="orbit" cx="150" cy="150" r="'+r.toFixed(1)+'"/>';
+    const er=cnt>18?2.6:cnt>8?3.6:5.2;const outer=opt.outerHi&&i===N-1;
+    s+='<g>';
+    for(let k=0;k<cnt;k++){const a=2*Math.PI*k/cnt-Math.PI/2;s+='<circle class="el'+(outer?' out':'')+'" cx="'+(c+r*Math.cos(a)).toFixed(1)+'" cy="'+(c+r*Math.sin(a)).toFixed(1)+'" r="'+er+'"/>';}
+    const dur=(6+i*3.5).toFixed(1),dir=i%2?-360:360;
+    s+='<animateTransform attributeName="transform" type="rotate" from="0 150 150" to="'+dir+' 150 150" dur="'+dur+'s" repeatCount="indefinite"/></g>';
+  });
+  if(tot){
+    const m=Math.min(tot,70),pr=Math.max(2.2,Math.min(8,nucR/Math.sqrt(m)*0.95));
+    const pShow=Math.round(m*p/tot);
+    // distribute protons evenly among the shown particles
+    s+='<circle cx="150" cy="150" r="'+(nucR+4).toFixed(1)+'" fill="rgba(255,77,109,.12)"/><g>';
+    let pc=0;
+    for(let i=0;i<m;i++){
+      const rr=(nucR-pr*0.6)*Math.sqrt((i+0.5)/m),th=i*2.39996;
+      const isP=Math.floor((i+1)*pShow/m)>pc;if(isP)pc++;
+      const x=c+rr*Math.cos(th),y=c+rr*Math.sin(th);
+      s+='<circle class="'+(isP?'pr':'nu')+'" cx="'+x.toFixed(1)+'" cy="'+y.toFixed(1)+'" r="'+pr.toFixed(1)+'"/>';
+      if(isP&&pr>=6)s+='<text x="'+x.toFixed(1)+'" y="'+y.toFixed(1)+'" font-size="'+(pr*1.3).toFixed(1)+'">+</text>';
+    }
+    s+='<animateTransform attributeName="transform" type="rotate" values="0 150 150;4 150 150;-4 150 150;0 150 150" dur="1.2s" repeatCount="indefinite"/></g>';
+  }
+  return s+'</svg>';
+}
+
+// ---------- i18n
+function applyLang(){
+  document.documentElement.lang=lang;
+  document.title=t("heroTitle");
+  document.querySelectorAll("[data-t]").forEach(el=>{el.innerHTML=t(el.dataset.t)});
+  $("#lde").classList.toggle("on",lang==="de");$("#len").classList.toggle("on",lang==="en");
+  document.querySelectorAll(".cell[data-z] .cn").forEach(el=>{el.textContent=nm(EL[el.parentNode.dataset.z-1])});
+  document.querySelectorAll(".cell[data-z]").forEach(el=>{const e=EL[el.dataset.z-1];el.title=nm(e)+" ("+e.sym+")";el.setAttribute("aria-label",nm(e)+" "+e.z)});
+  renderLegend();renderBuilder();renderPeriod();renderGroup();renderQuiz();
+  if(curEl)openEl(curEl,true);
+}
+function setLang(l){lang=l;if(store)store.setItem("johann-lang",l);applyLang()}
+
+// ---------- periodic table renderer
+function buildTable(host,opts){
+  host.innerHTML="";host.className="ptable"+(opts.mini?" mini":"");
+  for(let g=1;g<=18;g++){const d=document.createElement("div");d.className="lbl";d.style.gridRow=1;d.style.gridColumn=g+1;d.textContent=g;host.appendChild(d)}
+  for(let p=1;p<=7;p++){const d=document.createElement("div");d.className="lbl";d.style.gridRow=p+1;d.style.gridColumn=1;d.textContent=p;host.appendChild(d)}
+  [[7,"57–71","la"],[8,"89–103","ac"]].forEach(([r,txt,c])=>{const d=document.createElement("div");d.className="cell ph c-"+c;d.style.gridRow=r;d.style.gridColumn=4;d.innerHTML='<span class="cs">'+txt+'</span>';host.appendChild(d)});
+  EL.forEach(e=>{
+    const b=document.createElement("button");b.type="button";b.className="cell c-"+e.cat;b.dataset.z=e.z;
+    b.style.gridRow=e.row;b.style.gridColumn=e.col;
+    b.innerHTML='<span class="cz">'+e.z+'</span><span class="cs">'+e.sym+'</span><span class="cn">'+nm(e)+'</span>';
+    b.title=nm(e)+" ("+e.sym+")";
+    b.addEventListener("click",()=>opts.onClick(e,b));host.appendChild(b);
+  });
+}
+function highlight(host,pred){
+  const any=!!pred;host.classList.toggle("dimmed",any);
+  host.querySelectorAll(".cell[data-z]").forEach(c=>c.classList.toggle("hi",any&&pred(EL[c.dataset.z-1])));
+  host.querySelectorAll(".cell.ph").forEach(c=>c.classList.toggle("hi",any&&((c.classList.contains("c-la")&&pred(bySym.La))||(c.classList.contains("c-ac")&&pred(bySym.Ac)))));
+}
+
+// ---------- legend
+let catOn=null;
+function renderLegend(){
+  const L=$("#legend");L.innerHTML="";
+  ["am","ae","tm","pt","md","nm","hl","ng","la","ac"].forEach(c=>{
+    const b=document.createElement("button");b.type="button";b.className="c-"+c+(catOn===c?" on":"");b.innerHTML="<i></i>"+t(c);
+    b.onclick=()=>{catOn=catOn===c?null:c;highlight($("#mainTable"),catOn?e=>e.cat===catOn:null);renderLegend()};L.appendChild(b);
+  });
+}
+
+// ---------- element panel
+let curEl=null;
+function factFor(e){
+  if(FACTS[e.sym])return FACTS[e.sym][lang==="de"?0:1];
+  let f=fmt(t("gen_"+e.cat),{n:nm(e)});
+  if(e.z>=95)f+=" "+t("synth");
+  return f;
+}
+function openEl(e,keep){
+  curEl=e;const P=$("#panel");P.className="panel c-"+e.cat;
+  const radio=e.mass.startsWith("(");
+  const other=lang==="de"?e.en:e.de;
+  P.innerHTML='<button class="btn sm ghost xbtn" id="xb">'+t("close")+'</button>'+
+  '<div class="grid"><div>'+
+   '<div class="phead"><div class="ptile"><span class="z">'+e.z+'</span><span class="s">'+e.sym+'</span></div><div><h3>'+nm(e)+'</h3><div class="alt">'+(lang==="de"?"EN: ":"DE: ")+other+'</div><span class="pill" style="background:var(--cc);color:#071028">'+t(e.cat)+'</span></div></div>'+
+   '<div class="stats">'+
+    '<div class="stat"><div class="k">'+t("atomicNo")+'</div><div class="v">'+e.z+'</div></div>'+
+    '<div class="stat"><div class="k">'+t("massL")+'</div><div class="v">'+massTxt(e.mass)+'</div></div>'+
+    '<div class="stat"><div class="k"><span class="dot p"></span>'+t("protons")+'</div><div class="v">'+e.z+'</div></div>'+
+    '<div class="stat"><div class="k"><span class="dot n"></span>'+t("neutrons")+'</div><div class="v">'+(e.A-e.z)+'</div></div>'+
+    '<div class="stat"><div class="k"><span class="dot e"></span>'+t("electrons")+'</div><div class="v">'+e.z+'</div></div>'+
+    '<div class="stat"><div class="k">'+t("periodL")+' / '+t("groupL")+'</div><div class="v">'+e.period+' / '+(e.group||t("fGroup"))+'</div></div>'+
+   '</div>'+
+   '<div class="stat"><div class="k">'+t("shellsL")+'</div><div class="v">'+e.shells.join(" · ")+'</div></div>'+
+   '<div class="fact"><b>💡 '+t("factL")+'</b><br>'+factFor(e)+'</div>'+
+   '<p class="small" style="text-align:left;margin:8px 0 0">'+t("neutronNote")+(radio?' '+t("massNote"):'')+(e.z>=104?' '+t("predicted"):'')+'</p>'+
+  '</div><div>'+bohrSVG(e.shells,e.z,e.A-e.z,{title:nm(e)})+
+   '<div class="pnav"><button class="btn sm ghost" id="pv" '+(e.z===1?'disabled':'')+'>◀ '+(e.z>1?EL[e.z-2].sym:'')+'</button><button class="btn sm ghost" id="nx" '+(e.z===118?'disabled':'')+'>'+(e.z<118?EL[e.z].sym:'')+' ▶</button></div>'+
+  '</div></div>';
+  $("#xb").onclick=closeEl;
+  $("#pv").onclick=()=>e.z>1&&openEl(EL[e.z-2]);$("#nx").onclick=()=>e.z<118&&openEl(EL[e.z]);
+  const M=$("#modal");if(!M.classList.contains("open")){M.classList.add("open");}
+  if(!keep)P.scrollTop=0;
+}
+function closeEl(){curEl=null;$("#modal").classList.remove("open")}
+$("#modal").addEventListener("click",ev=>{if(ev.target.id==="modal")closeEl()});
+document.addEventListener("keydown",ev=>{if(!curEl)return;if(ev.key==="Escape")closeEl();if(ev.key==="ArrowRight"&&curEl.z<118)openEl(EL[curEl.z]);if(ev.key==="ArrowLeft"&&curEl.z>1)openEl(EL[curEl.z-2])});
+
+// ---------- atom builder
+const B={p:1,n:0,e:1};const MAX={p:118,n:180,e:118};
+const MISSIONS=[s=>s.p===2&&s.n===2&&s.e===2,s=>s.p===6&&s.n===6&&s.e===6,s=>s.p===11&&s.n===12&&s.e===10,s=>s.p===8&&s.n===8&&s.e===8];
+const mDone=[false,false,false,false];
+function renderBuilder(){
+  $("#np").textContent=B.p;$("#nn").textContent=B.n;$("#ne").textContent=B.e;
+  const shells=B.e?EL[B.e-1].shells:[];
+  $("#bAtom").innerHTML=bohrSVG(shells,B.p,B.n);
+  let h="";
+  if(!B.p){h='<div class="bigsym">?</div><div class="hint">'+t("noElement")+'</div>';}
+  else{
+    const e=EL[B.p-1],q=B.p-B.e,cn=e.A-e.z;
+    const qs=q===0?'<span class="pill ok">'+t("charge")+': 0 · '+t("neutral")+'</span>':q>0?'<span class="pill pos">'+t("charge")+': +'+q+' · '+t("posIon")+'</span>':'<span class="pill neg">'+t("charge")+': −'+(-q)+' · '+t("negIon")+'</span>';
+    let hint;
+    if(B.n===cn)hint=fmt(t(e.mass.startsWith("(")?"commonR":"common"),{name:nm(e)});
+    else if(Math.abs(B.n-cn)<=Math.max(2,Math.round(cn*0.1)))hint=fmt(t("isotope"),{n:cn});
+    else hint=fmt(t("unstable"),{n:cn});
+    h='<div class="bigsym" style="color:var(--'+e.cat+')">'+e.sym+(q?'<sup style="font-size:.45em">'+(Math.abs(q)>1?Math.abs(q):'')+(q>0?'+':'−')+'</sup>':'')+'</div><div class="bigname">'+nm(e)+'</div>'+qs+'<span class="pill">'+t("massNo")+': '+(B.p+B.n)+'</span><div class="hint">'+hint+'</div>';
+  }
+  $("#bInfo").innerHTML=h;
+  // missions
+  const box=$("#missions");box.innerHTML="";
+  MISSIONS.forEach((f,i)=>{if(!mDone[i]&&f(B)){mDone[i]=true;burst(60)}
+    const d=document.createElement("div");d.className="mission"+(mDone[i]?" done":"");d.innerHTML='<span class="ck">'+(mDone[i]?"✅":"⬜")+'</span><span>'+t("m"+i)+(mDone[i]?' <b>'+t("missionDone")+'</b>':'')+'</span>';box.appendChild(d)});
+  if(mDone.every(x=>x)){const d=document.createElement("div");d.className="mission done";d.innerHTML='<span>'+t("allMissions")+'</span>';box.appendChild(d)}
+}
+document.querySelectorAll(".pm").forEach(b=>b.addEventListener("click",()=>{const k=b.dataset.k;B[k]=Math.max(0,Math.min(MAX[k],B[k]+Number(b.dataset.d)));renderBuilder()}));
+$("#bNeutral").onclick=()=>{B.e=B.p;renderBuilder()};
+$("#bCommon").onclick=()=>{if(B.p){B.n=EL[B.p-1].A-B.p;renderBuilder()}};
+$("#bReset").onclick=()=>{B.p=1;B.n=0;B.e=1;renderBuilder()};
+
+// ---------- periods
+let selP=2;
+function renderPeriod(){
+  const C=$("#periodChips");C.innerHTML="";
+  for(let p=1;p<=7;p++){const b=document.createElement("button");b.type="button";b.className="chip"+(p===selP?" on":"");b.textContent=t("periodBtn")+" "+p;b.onclick=()=>{selP=p;renderPeriod()};C.appendChild(b)}
+  highlight($("#periodTable"),e=>e.period===selP);
+  const [a,b]=PERIOD_PAIRS[selP].map(s=>bySym[s]);
+  $("#periodInfo").innerHTML='<p style="margin-top:0">'+fmt(t("rowsInfo"),{p:selP,pl:selP>1?t("plural"):""})+'</p><div class="pair">'+
+   [a,b].map(e=>'<div>'+bohrSVG(e.shells,e.z,e.A-e.z)+'<div class="figcap"><b>'+nm(e)+' ('+e.sym+')</b> · '+e.shells.join(" · ")+'</div></div>').join("")+'</div><p class="figcap">'+fmt(t("rowsCompare"),{a:nm(a),b:nm(b),p:selP})+'</p>';
+}
+// ---------- groups
+let selG=1;
+function renderGroup(){
+  const C=$("#groupChips");C.innerHTML="";
+  for(let g=1;g<=18;g++){const b=document.createElement("button");b.type="button";b.className="chip"+(g===selG?" on":"");b.textContent=g;b.title=t("groupBtn")+" "+g;b.onclick=()=>{selG=g;renderGroup()};C.appendChild(b)}
+  highlight($("#groupTable"),e=>e.group===selG);
+  const tm=selG>=3&&selG<=12;
+  const nameK=tm?"gTmn":"g"+selG+"n",txtK=tm?"gTm":"g"+selG;
+  const outerN=selG<=2?selG:selG-10;
+  let h='<h3 style="margin:0 0 6px;font-size:26px">'+t("groupBtn")+' '+selG+': '+t(nameK)+'</h3><p style="margin:0 0 6px">'+t(txtK)+'</p><span class="pill">'+(tm?t("outerTm"):fmt(t("outer"),{n:outerN+(selG===18?" (He: 2)":"")}))+'</span>';
+  const scene={1:'<span class="emo">💧</span><span class="emo zoom">🔘</span><span class="emo boom">💥</span><br>'+t("s1"),17:'<span class="emo">🔘</span> + <span class="emo">🟢</span> → <span class="emo boom">🧂</span><br>'+t("s17"),18:'<span class="emo zzz">😴</span><span class="emo zzz" style="animation-delay:.6s">💤</span><span class="emo">💡</span><br>'+t("s18"),2:'<span class="emo zzz">🦴</span><span class="emo">🥛</span><br>'+t("s2"),13:'<span class="emo zzz">🥫</span><br>'+t("s13"),14:'<span class="emo zzz">🌱</span><span class="emo zzz" style="animation-delay:.5s">💻</span><span class="emo">💎</span><br>'+t("s14"),15:'<span class="emo zzz">🌬️</span><br>'+t("s15"),16:'<span class="emo boom">🔥</span><span class="emo">🫁</span><br>'+t("s16")};
+  h+='<div class="scene">'+(scene[selG]||'<span class="emo zzz">⚙️</span><span class="emo boom">⚡</span><span class="emo">🔩</span><br>'+t("sTm"))+'</div>';
+  if(GROUP_PAIRS[selG]){const [a,b]=GROUP_PAIRS[selG].map(s=>bySym[s]);
+    h+='<div class="pair">'+[a,b].map(e=>'<div>'+bohrSVG(e.shells,e.z,e.A-e.z,{outerHi:true})+'<div class="figcap"><b>'+nm(e)+' ('+e.sym+')</b> · '+e.shells.join(" · ")+'</div></div>').join("")+'</div><p class="figcap">'+fmt(t("colsCompare"),{a:nm(a),b:nm(b)})+'</p>';}
+  $("#groupInfo").innerHTML=h;
+}
+
+// ---------- quiz
+const Q={i:-1,score:0,answered:false,order:[],picked:null};
+function shuffle(a){a=a.slice();for(let i=a.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[a[i],a[j]]=[a[j],a[i]]}return a}
+function startQuiz(){Q.i=0;Q.score=0;Q.answered=false;Q.picked=null;Q.order=QUIZ.map(q=>q.type==="mc"?shuffle([0,1,2]):null);renderQuiz()}
+function renderQuiz(){
+  const box=$("#quizBox");
+  if(Q.i<0){box.innerHTML='<div class="result"><div class="trophy">🧠</div><br><button class="btn" id="qs">'+t("qStart")+'</button></div>';$("#qs").onclick=startQuiz;return}
+  if(Q.i>=QUIZ.length){
+    const n=QUIZ.length,s=Q.score,msg=s>=9?t("r3"):s>=6?t("r2"):t("r1");
+    box.innerHTML='<div class="result"><div class="trophy">'+(s>=9?"🏆":s>=6?"🥈":"🌟")+'</div><h3 style="font-size:32px;margin:6px 0">'+t("resultTitle")+'</h3><p class="lead" style="margin:0 auto">'+fmt(t("result"),{s,n})+'</p><p style="font-size:22px">'+msg+'</p><button class="btn" id="qr">'+t("restart")+'</button></div>';
+    $("#qr").onclick=startQuiz;return;
+  }
+  const q=QUIZ[Q.i],L=q[lang];
+  let h='<div class="qtop"><span>'+fmt(t("qOf"),{i:Q.i+1,n:QUIZ.length})+'</span><span>'+fmt(t("qScore"),{s:Q.score})+'</span></div><div class="bar"><i style="width:'+(Q.i/QUIZ.length*100)+'%"></i></div><div class="qq">'+L.q+'</div>';
+  if(q.type==="mc"){h+='<div class="opts">'+Q.order[Q.i].map(k=>'<button class="opt" data-k="'+k+'">'+L.o[k]+'</button>').join("")+'</div>'}
+  else h+='<p style="margin:0 0 6px;color:var(--mut)">'+t("tapTable")+'</p><div class="tablewrap"><div id="quizTable"></div></div>';
+  h+='<div class="fb" id="fb"></div><div id="qn"></div>';
+  box.innerHTML=h;
+  if(q.type==="mc"){
+    box.querySelectorAll(".opt").forEach(b=>b.onclick=()=>answer(Number(b.dataset.k)===q.a,b));
+  }else{
+    buildTable($("#quizTable"),{mini:true,onClick:(e,b)=>{if(Q.answered)return;Q.picked=e.z;answer(q.ok(e),b,e)}});
+  }
+  if(Q.answered)showFeedback();
+}
+function answer(ok,btn,e){
+  if(Q.answered)return;Q.answered=true;Q.lastOk=ok;Q.lastName=e?nm(e)+" ("+e.sym+")":null;if(ok){Q.score++;burst(40)}
+  Q.lastBtn=btn?(btn.dataset.k||btn.dataset.z):null;showFeedback();
+}
+function showFeedback(){
+  const q=QUIZ[Q.i],L=q[lang],box=$("#quizBox");
+  if(q.type==="mc"){box.querySelectorAll(".opt").forEach(b=>{b.disabled=true;const k=Number(b.dataset.k);if(k===q.a)b.classList.add("good");else if(String(k)===Q.lastBtn)b.classList.add("bad")})}
+  else{const tb=$("#quizTable");q.show.forEach(z=>{const c=tb.querySelector('[data-z="'+z+'"]');if(c)c.classList.add("good")});if(!Q.lastOk&&Q.picked){const c=tb.querySelector('[data-z="'+Q.picked+'"]');if(c)c.classList.add("bad")}}
+  $("#fb").innerHTML=(Q.lastOk?'<span class="r">'+t("right")+'</span> ':'<span class="w">'+t("wrong")+'</span> ')+(Q.lastName&&!Q.lastOk?fmt(t("youClicked"),{name:Q.lastName})+' ':'')+L.x;
+  const last=Q.i===QUIZ.length-1;
+  $("#qn").innerHTML='<button class="btn" id="qnb" style="margin-top:12px">'+(last?t("finish"):t("nextQ"))+'</button>';
+  $("#qnb").onclick=()=>{Q.i++;Q.answered=false;Q.picked=null;renderQuiz();if(Q.i>=QUIZ.length)celebrate();$("#quiz").scrollIntoView({behavior:"smooth",block:"start"})};
+}
+
+// ---------- confetti
+const cv=$("#confetti"),cx=cv.getContext("2d");let parts=[],raf=null;
+function sizeCv(){const r=window.devicePixelRatio||1;cv.width=innerWidth*r;cv.height=innerHeight*r;cx.setTransform(r,0,0,r,0,0)}
+addEventListener("resize",sizeCv);sizeCv();
+function burst(n,x,y){
+  const cols=["#5cf2ff","#ff5ca8","#ffe066","#69db7c","#9775fa","#ffa94d"];
+  for(let i=0;i<n;i++)parts.push({x:x!==undefined?x:innerWidth/2,y:y!==undefined?y:innerHeight*0.45,vx:(Math.random()-.5)*14,vy:-Math.random()*13-4,s:5+Math.random()*7,r:Math.random()*6,vr:(Math.random()-.5)*.3,c:cols[i%cols.length],life:140+Math.random()*60});
+  if(!raf)raf=requestAnimationFrame(tick);
+}
+function tick(){
+  cx.clearRect(0,0,innerWidth,innerHeight);
+  parts.forEach(p=>{p.vy+=.28;p.vx*=.99;p.x+=p.vx;p.y+=p.vy;p.r+=p.vr;p.life--;cx.save();cx.translate(p.x,p.y);cx.rotate(p.r);cx.fillStyle=p.c;cx.fillRect(-p.s/2,-p.s/4,p.s,p.s/2);cx.restore()});
+  parts=parts.filter(p=>p.life>0&&p.y<innerHeight+40);
+  raf=parts.length?requestAnimationFrame(tick):(cx.clearRect(0,0,innerWidth,innerHeight),null);
+}
+function celebrate(){let k=0;const iv=setInterval(()=>{burst(70,Math.random()*innerWidth,innerHeight*0.3);if(++k>5)clearInterval(iv)},280)}
+
+// ---------- reveal + nav highlight
+const io="IntersectionObserver" in window?new IntersectionObserver(es=>es.forEach(en=>{if(en.isIntersecting)en.target.classList.add("vis")}),{threshold:.08}):null;
+document.querySelectorAll(".reveal").forEach(s=>io?io.observe(s):s.classList.add("vis"));
+const navIo="IntersectionObserver" in window?new IntersectionObserver(es=>es.forEach(en=>{if(en.isIntersecting){document.querySelectorAll("#nav a").forEach(a=>a.classList.toggle("on",a.getAttribute("href")==="#"+en.target.id))}}),{rootMargin:"-45% 0px -50% 0px"}):null;
+document.querySelectorAll("main section[id]").forEach(s=>navIo&&navIo.observe(s));
+
+// ---------- init
+$("#heroAtom").innerHTML=bohrSVG([2,8,8,2],20,20,{title:"Calcium"});
+$("#demoAtom").innerHTML=bohrSVG([2,1],3,4,{outerHi:false,title:"Lithium"});
+buildTable($("#mainTable"),{onClick:e=>openEl(e)});
+buildTable($("#periodTable"),{mini:true,onClick:e=>{selP=e.period;renderPeriod()}});
+buildTable($("#groupTable"),{mini:true,onClick:e=>{if(e.group){selG=e.group;renderGroup()}else openEl(e)}});
+$("#lde").onclick=()=>setLang("de");$("#len").onclick=()=>setLang("en");
+applyLang();
+</script>
+</body></html>
