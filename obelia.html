@@ -1,0 +1,637 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta name="robots" content="noindex, nofollow">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Johanns Reise zu Obelia</title>
+<style>
+:root{--bg:#070b1f;--bg2:#0f1640;--card:rgba(255,255,255,.06);--line:rgba(255,255,255,.14);--txt:#eef2ff;--mut:#a9b4e8;--neon:#5cf2ff;--pink:#ff5ca8;--yel:#ffe066;--pro:#ff4d6d;--neu:#9aa5b8;--ele:#4dd8ff;
+--am:#ff6b6b;--ae:#ffa94d;--tm:#ffd43b;--pt:#69db7c;--md:#38d9a9;--nm:#4dabf7;--hl:#9775fa;--ng:#f783ac;--la:#66d9e8;--ac:#e599f7}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{margin:0;font-family:"Trebuchet MS","Avenir Next","Segoe UI",system-ui,-apple-system,sans-serif;color:var(--txt);font-size:19px;line-height:1.5;
+background:radial-gradient(1200px 700px at 80% -10%,#2a1b6b 0%,transparent 60%),radial-gradient(900px 600px at -10% 30%,#0d3b66 0%,transparent 55%),var(--bg);min-height:100vh;overflow-x:hidden}
+body:before{content:"";position:fixed;top:0;right:0;bottom:0;left:0;inset:0;pointer-events:none;z-index:0;opacity:.8;
+background-image:radial-gradient(1.5px 1.5px at 20px 30px,#fff,transparent),radial-gradient(1px 1px at 120px 80px,#cfe,transparent),radial-gradient(1.5px 1.5px at 200px 160px,#fff,transparent),radial-gradient(1px 1px at 300px 40px,#fde,transparent),radial-gradient(1px 1px at 360px 220px,#fff,transparent),radial-gradient(1.5px 1.5px at 80px 260px,#def,transparent);background-size:400px 300px;animation:tw 6s ease-in-out infinite alternate}
+@keyframes tw{from{opacity:.45}to{opacity:.9}}
+main,header,footer{position:relative;z-index:1}
+b{color:#fff}
+.top{position:sticky;top:0;z-index:20;display:flex;align-items:center;gap:10px;padding:8px 14px;background:rgba(7,11,31,.82);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.logo{font-weight:800;font-size:20px;white-space:nowrap;background:linear-gradient(90deg,var(--neon),var(--pink));-webkit-background-clip:text;background-clip:text;color:transparent}
+nav{display:flex;gap:4px;overflow-x:auto;flex:1;scrollbar-width:none}nav::-webkit-scrollbar{display:none}
+nav a{color:var(--mut);text-decoration:none;padding:8px 12px;border-radius:999px;font-size:16px;white-space:nowrap;transition:.2s}
+nav a:hover,nav a.on{color:#fff;background:rgba(92,242,255,.15)}
+.lang{display:flex;border:2px solid var(--neon);border-radius:999px;overflow:hidden;flex:none}
+.lang button{all:unset;cursor:pointer;padding:6px 12px;font-weight:800;font-size:15px;color:var(--neon)}
+.lang button.on{background:var(--neon);color:#071028}
+section{max-width:1180px;margin:0 auto;padding:56px 18px}
+h1{font-size:clamp(34px,6vw,64px);line-height:1.08;margin:.2em 0;background:linear-gradient(90deg,#fff,var(--neon) 40%,var(--pink));-webkit-background-clip:text;background-clip:text;color:transparent}
+h2{font-size:clamp(28px,4vw,42px);margin:0 0 12px}
+h2 .em{display:inline-block;animation:bob 2.4s ease-in-out infinite}
+@keyframes bob{50%{transform:translateY(-6px) rotate(6deg)}}
+.lead{font-size:clamp(18px,2.2vw,22px);color:#dfe5ff;max-width:860px}
+.kicker{color:var(--yel);font-weight:800;letter-spacing:.06em;text-transform:uppercase;font-size:15px}
+.hero{display:grid;grid-template-columns:1.3fr 1fr;gap:30px;align-items:center;min-height:calc(100vh - 60px)}
+.hero svg{width:100%;max-width:420px;filter:drop-shadow(0 0 30px rgba(92,242,255,.35))}
+.btn{display:inline-flex;align-items:center;gap:8px;border:none;cursor:pointer;font:inherit;font-weight:800;font-size:19px;color:#071028;background:linear-gradient(90deg,var(--neon),#8affc1);padding:14px 26px;border-radius:999px;box-shadow:0 6px 24px rgba(92,242,255,.35);transition:transform .15s,box-shadow .15s;touch-action:manipulation;text-decoration:none}
+.btn:hover{transform:translateY(-2px) scale(1.03)}.btn:active{transform:scale(.97)}
+.btn.ghost{background:transparent;color:var(--txt);border:2px solid var(--line);box-shadow:none}
+.btn.sm{font-size:16px;padding:9px 16px}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:16px;margin-top:22px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:22px;padding:20px;transition:transform .25s,border-color .25s}
+.card:hover{transform:translateY(-4px);border-color:rgba(92,242,255,.5)}
+.card h3{margin:0 0 6px;font-size:22px}
+.card p{margin:0;color:#d6dcff}
+.dot{display:inline-block;width:22px;height:22px;border-radius:50%;vertical-align:-4px;margin-right:6px;box-shadow:0 0 12px currentColor}
+.dot.p{background:var(--pro);color:var(--pro)}.dot.n{background:var(--neu);color:var(--neu)}.dot.e{background:var(--ele);color:var(--ele)}.dot.s{border:3px dashed var(--neon);color:transparent}
+.split{display:grid;grid-template-columns:1fr 1fr;gap:26px;align-items:center}
+.note{background:linear-gradient(90deg,rgba(255,92,168,.15),rgba(92,242,255,.12));border:1px solid var(--line);border-radius:18px;padding:14px 18px;margin-top:18px}
+.bohr{width:100%;max-width:340px;display:block;margin:0 auto}
+.bohr .orbit{fill:none;stroke:rgba(92,242,255,.35);stroke-width:1.5;stroke-dasharray:4 5}
+.bohr .el{fill:var(--ele);filter:url(#glow)}.bohr .el.out{fill:var(--yel)}
+.bohr .pr{fill:var(--pro)}.bohr .nu{fill:var(--neu)}
+.bohr text{font-weight:800;fill:#fff;text-anchor:middle;dominant-baseline:central;pointer-events:none}
+.figcap{text-align:center;color:var(--mut);font-size:16px;margin-top:6px}
+/* builder */
+.builder{display:grid;grid-template-columns:1fr 1.1fr;gap:24px;align-items:start;margin-top:18px}
+.ctrl{display:grid;gap:12px}
+.ctrlrow{display:flex;align-items:center;gap:12px;background:var(--card);border:1px solid var(--line);border-radius:18px;padding:10px 14px}
+.ctrlrow .lab{flex:1;font-weight:800;font-size:20px}
+.ctrlrow .num{min-width:52px;text-align:center;font-size:30px;font-weight:900}
+.pm{width:54px;height:54px;border-radius:50%;border:none;font-size:30px;font-weight:900;cursor:pointer;color:#071028;touch-action:manipulation;transition:transform .1s}
+.pm:active{transform:scale(.88)}
+.pm.p{background:var(--pro)}.pm.n{background:var(--neu)}.pm.e{background:var(--ele)}
+.readout{text-align:center;background:var(--card);border:1px solid var(--line);border-radius:22px;padding:16px}
+.bigsym{font-size:64px;font-weight:900;line-height:1;margin:4px 0}
+.bigname{font-size:26px;font-weight:800}
+.pill{display:inline-block;padding:4px 12px;border-radius:999px;font-weight:800;font-size:16px;margin:4px 2px;background:rgba(255,255,255,.1)}
+.pill.ok{background:rgba(105,219,124,.25);color:#b6ffc4}.pill.pos{background:rgba(255,77,109,.25);color:#ffc2cf}.pill.neg{background:rgba(77,216,255,.25);color:#c4f3ff}
+.hint{font-size:16px;color:#d6dcff;margin-top:8px;min-height:2.6em}
+.missions{display:grid;gap:8px}
+.mission{display:flex;gap:10px;align-items:flex-start;padding:10px 12px;border-radius:14px;background:rgba(255,255,255,.04);border:1px solid var(--line);font-size:16px}
+.mission.done{border-color:#69db7c;background:rgba(105,219,124,.12)}
+.mission .ck{font-size:20px;line-height:1.2}
+.btnrow{display:flex;flex-wrap:wrap;gap:8px}
+/* table */
+.tablewrap{overflow-x:auto;-webkit-overflow-scrolling:touch;padding:10px 4px 14px;margin:0 -4px}
+.ptable{--c:clamp(34px,5.1vw,60px);display:grid;grid-template-columns:18px repeat(18,var(--c));grid-template-rows:18px repeat(7,var(--c)) 12px repeat(2,var(--c));gap:3px;width:max-content;margin:0 auto}
+.ptable.mini{--c:clamp(24px,3.6vw,40px);gap:2px}
+.ptable .lbl{font-size:11px;color:var(--mut);display:flex;align-items:center;justify-content:center;font-weight:800}
+.cell{position:relative;border:1.5px solid var(--cc);background:color-mix(in srgb,var(--cc) 22%,transparent);background-color:rgba(255,255,255,.06);border-radius:8px;color:#fff;padding:0;font:inherit;cursor:pointer;display:flex;flex-direction:column;align-items:center;justify-content:center;transition:transform .15s,opacity .3s,box-shadow .2s,filter .3s;touch-action:manipulation;overflow:hidden;line-height:1}
+@supports (background:color-mix(in srgb,red 20%,transparent)){.cell{background:color-mix(in srgb,var(--cc) 22%,transparent)}}
+.cell:hover,.cell:focus-visible{transform:scale(1.18);z-index:3;box-shadow:0 0 18px var(--cc);outline:none}
+.cell .cz{position:absolute;top:2px;left:3px;font-size:calc(var(--c)*.2);opacity:.85}
+.cell .cs{font-weight:900;font-size:calc(var(--c)*.4)}
+.cell .cn{font-size:calc(var(--c)*.15);opacity:.85;margin-top:2px;max-width:100%;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;padding:0 2px}
+.mini .cell .cn,.mini .cell .cz{display:none}.mini .cell .cs{font-size:calc(var(--c)*.42)}
+.cell.ph{cursor:default;opacity:.7;border-style:dashed}.cell.ph .cs{font-size:calc(var(--c)*.2)}
+.cell.ph:hover{transform:none;box-shadow:none}
+.ptable.dimmed .cell:not(.hi){opacity:.18;filter:grayscale(.7)}
+.cell.hi{box-shadow:0 0 14px var(--cc),inset 0 0 10px var(--cc);animation:pulse 1.6s ease-in-out infinite}
+@keyframes pulse{50%{box-shadow:0 0 26px var(--cc),inset 0 0 14px var(--cc)}}
+.cell.good{--cc:#69db7c!important;animation:pop .5s}.cell.bad{--cc:#ff4d6d!important;animation:shake .4s}
+@keyframes pop{50%{transform:scale(1.4)}}@keyframes shake{25%{transform:translateX(-4px)}75%{transform:translateX(4px)}}
+.c-am{--cc:var(--am)}.c-ae{--cc:var(--ae)}.c-tm{--cc:var(--tm)}.c-pt{--cc:var(--pt)}.c-md{--cc:var(--md)}.c-nm{--cc:var(--nm)}.c-hl{--cc:var(--hl)}.c-ng{--cc:var(--ng)}.c-la{--cc:var(--la)}.c-ac{--cc:var(--ac)}
+.legend{display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin:14px 0 4px}
+.legend button{font:inherit;font-size:15px;color:#fff;cursor:pointer;border:1.5px solid var(--cc);background:rgba(255,255,255,.05);border-radius:999px;padding:6px 12px;display:flex;align-items:center;gap:6px;touch-action:manipulation}
+.legend button i{width:12px;height:12px;border-radius:50%;background:var(--cc);display:inline-block}
+.legend button.on{background:var(--cc);color:#071028;font-weight:800}
+.small{font-size:15px;color:var(--mut);text-align:center}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin:16px 0}
+.chip{font:inherit;font-weight:800;font-size:17px;min-width:52px;min-height:48px;border-radius:14px;border:2px solid var(--line);background:var(--card);color:#fff;cursor:pointer;padding:6px 12px;transition:.2s;touch-action:manipulation}
+.chip.on{border-color:var(--neon);background:rgba(92,242,255,.2);box-shadow:0 0 16px rgba(92,242,255,.4)}
+.infobox{background:var(--card);border:1px solid var(--line);border-radius:22px;padding:18px;margin-top:16px}
+.pair{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:10px}
+.pair .bohr{max-width:240px}
+.scene{margin-top:12px;padding:14px;border-radius:16px;background:rgba(0,0,0,.25);text-align:center;font-size:20px;font-weight:800;overflow:hidden;position:relative;min-height:70px}
+.scene .emo{display:inline-block;font-size:36px;margin:0 6px}
+.zoom{animation:zoom 1.6s ease-in-out infinite alternate}@keyframes zoom{from{transform:translateX(-40px) rotate(-10deg)}to{transform:translateX(40px) rotate(10deg)}}
+.boom{animation:boom 1s ease-in-out infinite}@keyframes boom{50%{transform:scale(1.5)}}
+.zzz{animation:zzz 2.5s ease-in-out infinite}@keyframes zzz{50%{transform:translateY(-8px);opacity:.5}}
+.yl{color:var(--yel);font-weight:800}
+/* modal */
+.modal{position:fixed;top:0;right:0;bottom:0;left:0;inset:0;z-index:50;display:none;align-items:center;justify-content:center;background:rgba(3,6,20,.7);backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px);padding:14px}
+.modal.open{display:flex;animation:fade .25s}
+@keyframes fade{from{opacity:0}}
+.panel{position:relative;width:min(880px,100%);max-height:calc(100vh - 28px);overflow:auto;border-radius:26px;background:linear-gradient(160deg,#151f5c,#0a0f2e);border:2px solid var(--cc);box-shadow:0 0 50px color-mix(in srgb,var(--cc) 50%,transparent);padding:22px;animation:rise .35s cubic-bezier(.2,1.4,.4,1)}
+@keyframes rise{from{transform:translateY(30px) scale(.94);opacity:0}}
+.panel .grid{display:grid;grid-template-columns:1fr 1fr;gap:18px;align-items:center}
+.ptile{width:120px;height:120px;border-radius:20px;border:3px solid var(--cc);display:flex;flex-direction:column;align-items:center;justify-content:center;background:rgba(255,255,255,.06);box-shadow:0 0 24px var(--cc);position:relative}
+.ptile .s{font-size:54px;font-weight:900;line-height:1}.ptile .z{position:absolute;top:6px;left:10px;font-weight:800}
+.phead{display:flex;gap:18px;align-items:center}
+.phead h3{margin:0;font-size:32px}.phead .alt{color:var(--mut);font-size:18px}
+.stats{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin:14px 0}
+.stat{background:rgba(255,255,255,.06);border-radius:14px;padding:8px 12px}
+.stat .k{font-size:14px;color:var(--mut)}.stat .v{font-size:22px;font-weight:900}
+.fact{background:rgba(255,224,102,.1);border:1px solid rgba(255,224,102,.4);border-radius:16px;padding:12px 14px;margin-top:10px}
+.fact b{color:var(--yel)}
+.pnav{display:flex;justify-content:space-between;gap:8px;margin-top:14px}
+.xbtn{position:absolute;top:12px;right:12px}
+/* quiz */
+.quizbox{background:var(--card);border:1px solid var(--line);border-radius:26px;padding:22px;margin-top:16px}
+.qtop{display:flex;justify-content:space-between;color:var(--mut);font-weight:800;font-size:16px}
+.bar{height:10px;border-radius:99px;background:rgba(255,255,255,.1);overflow:hidden;margin:8px 0 14px}.bar i{display:block;height:100%;background:linear-gradient(90deg,var(--neon),var(--pink));transition:width .4s}
+.qq{font-size:clamp(22px,3vw,30px);font-weight:800;margin:4px 0 14px}
+.opts{display:grid;gap:10px}
+.opt{font:inherit;font-size:20px;text-align:left;padding:14px 18px;border-radius:16px;border:2px solid var(--line);background:rgba(255,255,255,.05);color:#fff;cursor:pointer;transition:.2s;touch-action:manipulation}
+.opt:hover:not(:disabled){border-color:var(--neon);transform:translateX(4px)}
+.opt.good{border-color:#69db7c;background:rgba(105,219,124,.25)}.opt.bad{border-color:#ff4d6d;background:rgba(255,77,109,.2)}
+.fb{margin-top:14px;font-size:19px;min-height:1.5em}
+.fb .r{color:#8cff9e;font-weight:900}.fb .w{color:#ff8fa3;font-weight:900}
+.result{text-align:center}.result .trophy{font-size:90px;animation:bob 2s ease-in-out infinite;display:inline-block}
+#confetti{position:fixed;top:0;right:0;bottom:0;left:0;inset:0;pointer-events:none;z-index:100}
+footer{text-align:center;color:var(--mut);padding:30px 10px 50px;font-size:16px}
+.reveal{opacity:0;transform:translateY(24px);transition:opacity .7s,transform .7s}.reveal.vis{opacity:1;transform:none}
+@media (max-width:820px){.hero,.split,.builder,.panel .grid{grid-template-columns:1fr}.hero{min-height:auto}.hero svg{max-width:300px;margin:0 auto;display:block}.logo{display:none}body{font-size:18px}}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+/* ---- Obelia additions (same design language) ---- */
+:root{--peri:#e0a74b;--coen:#ff9fb8;--gas:#6b3fa0}
+.hero svg.heroart{max-width:440px}
+.steps{counter-reset:s;display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px;margin-top:22px}
+.step{counter-increment:s;position:relative;background:var(--card);border:1px solid var(--line);border-radius:22px;padding:20px 20px 20px 70px}
+.step:before{content:counter(s);position:absolute;left:16px;top:16px;width:40px;height:40px;border-radius:50%;background:linear-gradient(135deg,var(--neon),var(--pink));color:#071028;font-weight:900;font-size:22px;display:flex;align-items:center;justify-content:center}
+.step h3{margin:0 0 4px;font-size:21px}.step p{margin:0;color:#d6dcff}
+.warn{background:rgba(255,77,109,.12);border:1px solid rgba(255,77,109,.5);border-radius:18px;padding:14px 18px;margin-top:18px}
+.compare{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:22px}
+.compare .card h3{font-size:24px}.compare ul{margin:6px 0 0;padding-left:22px;color:#d6dcff}
+.diag{display:grid;grid-template-columns:1.25fr 1fr;gap:22px;align-items:start;margin-top:18px}
+.svgbox{background:radial-gradient(500px 360px at 50% 40%,rgba(92,242,255,.14),rgba(0,0,0,.35));border:1px solid var(--line);border-radius:26px;padding:8px;position:relative}
+.svgbox svg{width:100%;height:auto;display:block;max-height:78vh;touch-action:manipulation}
+.hs{cursor:pointer;-webkit-tap-highlight-color:transparent}
+.hs:hover,.hs.sel{filter:drop-shadow(0 0 7px var(--yel)) brightness(1.25)}
+.hs.good{filter:drop-shadow(0 0 10px #69db7c) brightness(1.4)}
+.hs.bad{filter:drop-shadow(0 0 10px #ff4d6d)}
+.badge circle{fill:var(--yel);stroke:#071028;stroke-width:2}.badge text{font-weight:900;font-size:13px;fill:#071028;text-anchor:middle;dominant-baseline:central}.badge line{stroke:var(--yel);stroke-width:1.5}
+.badge{pointer-events:none}
+.modes{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:12px}
+.modes .btn.on{background:linear-gradient(90deg,var(--yel),#ffb86b);color:#071028;border-color:transparent}
+.tools{display:flex;gap:10px;flex-wrap:wrap;margin-top:10px;justify-content:center}
+.partlist{display:flex;flex-wrap:wrap;gap:8px;margin-top:12px}
+.partlist button{font:inherit;font-size:15px;color:#fff;cursor:pointer;border:1.5px solid var(--neon);background:rgba(255,255,255,.05);border-radius:999px;padding:6px 12px;touch-action:manipulation}
+.partlist button.on{background:var(--neon);color:#071028;font-weight:800}
+.big{font-size:26px;font-weight:900}
+.target{font-size:clamp(22px,3vw,30px);font-weight:900;color:var(--yel)}
+.shake{animation:shake .4s}@keyframes shake{25%{transform:translateX(-8px)}75%{transform:translateX(8px)}}
+.calc{display:grid;grid-template-columns:1fr 1fr;gap:22px;margin-top:18px;align-items:start}
+.eqn{display:flex;align-items:center;gap:10px;flex-wrap:wrap;font-size:26px;font-weight:900;margin-top:12px}
+.eqn .res{color:var(--neon);font-size:40px}
+.fov{display:block;margin:10px auto 0;max-width:300px;width:100%}
+.cycle{display:grid;grid-template-columns:1fr 1fr;gap:22px;margin-top:18px;align-items:start}
+.cards7{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:10px}
+.cc{font:inherit;color:#fff;text-align:left;cursor:pointer;background:var(--card);border:2px solid var(--line);border-radius:18px;padding:12px 14px;touch-action:manipulation;transition:.2s}
+.cc:hover:not(:disabled){border-color:var(--neon)}.cc:disabled{opacity:.35}
+.cc .em2{font-size:30px;display:block}
+.slots{display:grid;gap:8px;margin-top:6px}
+.slot{display:flex;gap:10px;align-items:center;min-height:52px;padding:8px 14px;border-radius:16px;border:2px dashed var(--line);color:var(--mut)}
+.slot.full{border:2px solid #69db7c;background:rgba(105,219,124,.18);color:#fff}
+.slot b.n{display:inline-flex;width:30px;height:30px;border-radius:50%;background:var(--neon);color:#071028;align-items:center;justify-content:center;flex:none}
+select.sel{font:inherit;font-size:20px;font-weight:800;color:#fff;background:rgba(255,255,255,.08);border:2px solid var(--line);border-radius:14px;padding:8px 12px}
+select.sel option{color:#000}
+@media (max-width:820px){.diag,.calc,.cycle,.compare{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<noscript>
+<style>main,footer,.top,.modal,#confetti{display:none!important}
+.nojs{position:relative;z-index:5;max-width:640px;margin:40px auto;padding:24px;border-radius:22px;border:2px solid #5cf2ff;background:rgba(15,22,64,.92);color:#eef2ff;font-size:18px;line-height:1.5}
+.nojs h1{font-size:28px;margin:0 0 10px}.nojs h2{font-size:20px;margin:18px 0 6px;color:#ffe066}.nojs p{margin:6px 0}</style>
+<div class="nojs" lang="de">
+<h1>🔬 Johanns Reise zu Obelia</h1>
+<h2>🇩🇪 In Safari öffnen</h2>
+<p>Diese Vorschau kann die Seite nicht starten, weil hier kein JavaScript läuft (z.&nbsp;B. Dateivorschau in „Dateien“, Mail oder Chat).</p>
+<p><b>So klappt es:</b> Die Seite in <b>Safari</b> öffnen – am iPhone/iPad über einen <b>Link</b> (Datei online stellen) – oder am Computer die Datei per Doppelklick in Chrome, Safari, Firefox oder Edge öffnen.</p>
+<h2 lang="en">🇬🇧 Open in Safari</h2>
+<p lang="en">This preview can't start the page because JavaScript doesn't run here (e.g. the Files, Mail or chat preview).</p>
+<p lang="en"><b>How to fix:</b> open the page in <b>Safari</b> – on iPhone/iPad via a <b>link</b> (put the file online) – or on a computer, double-click the file to open it in Chrome, Safari, Firefox or Edge.</p>
+</div>
+</noscript>
+<svg width="0" height="0" style="position:absolute"><defs><filter id="glow" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="1.6" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter></defs></svg>
+<header class="top">
+  <div class="logo">🔬 Johann</div>
+  <nav id="nav">
+    <a href="#intro" data-t="navIntro"></a><a href="#animal" data-t="navAnimal"></a><a href="#why" data-t="navWhy"></a><a href="#tech" data-t="navTech"></a><a href="#diagram" data-t="navDiag"></a><a href="#mag" data-t="navMag"></a><a href="#cycle" data-t="navCycle"></a><a href="#quiz" data-t="navQuiz"></a>
+  </nav>
+  <div class="lang" role="group" aria-label="Sprache / Language"><button id="lde" type="button">DE</button><button id="len" type="button">EN</button></div>
+</header>
+<main>
+<section id="intro" class="hero">
+  <div>
+    <div class="kicker" data-t="heroKicker"></div>
+    <h1 data-t="heroTitle"></h1>
+    <p class="lead" data-t="heroText"></p>
+    <a class="btn" href="#animal" data-t="heroBtn"></a>
+  </div>
+  <div id="heroArt"></div>
+</section>
+<section id="animal" class="reveal">
+  <h2><span class="em">🌿</span> <span data-t="animTitle"></span></h2>
+  <p class="lead" data-t="animLead"></p>
+  <div class="compare">
+    <div class="card"><h3 data-t="plantT"></h3><ul id="plantUl"></ul></div>
+    <div class="card"><h3 data-t="obT"></h3><ul id="obUl"></ul></div>
+  </div>
+  <div class="note" data-t="animNote"></div>
+</section>
+<section id="why" class="reveal">
+  <h2><span class="em">🔍</span> <span data-t="whyTitle"></span></h2>
+  <p class="lead" data-t="whyLead"></p>
+  <div class="cards">
+    <div class="card"><h3 data-t="w1t"></h3><p data-t="w1"></p></div>
+    <div class="card"><h3 data-t="w2t"></h3><p data-t="w2"></p></div>
+    <div class="card"><h3 data-t="w3t"></h3><p data-t="w3"></p></div>
+    <div class="card"><h3 data-t="w4t"></h3><p data-t="w4"></p></div>
+  </div>
+</section>
+<section id="tech" class="reveal">
+  <h2><span class="em">🎛️</span> <span data-t="techTitle"></span></h2>
+  <p class="lead" data-t="techLead"></p>
+  <div class="steps" id="steps"></div>
+  <div class="warn" data-t="techWarn"></div>
+  <div class="note" data-t="lookFor"></div>
+</section>
+<section id="diagram" class="reveal">
+  <h2><span class="em">🧭</span> <span data-t="diagTitle"></span></h2>
+  <p class="lead" data-t="diagLead"></p>
+  <div class="modes"><button class="btn sm" id="mExplore" type="button"></button><button class="btn sm ghost" id="mFind" type="button"></button></div>
+  <div class="diag">
+    <div><div class="svgbox" id="colony"></div>
+      <div class="tools"><button class="btn sm ghost" id="bBadges" type="button"></button></div>
+      <p class="small" data-t="diagCap"></p></div>
+    <div><div class="infobox" id="diagInfo"></div><div class="partlist" id="partList"></div></div>
+  </div>
+</section>
+<section id="mag" class="reveal">
+  <h2><span class="em">🔢</span> <span data-t="magTitle"></span></h2>
+  <p class="lead" data-t="magLead"></p>
+  <div class="calc">
+    <div class="infobox">
+      <div class="ctrlrow" style="margin-top:0"><span class="lab" style="flex:1;font-weight:800" data-t="eyepiece"></span><select class="sel" id="selEye"><option value="10">10×</option><option value="15">15×</option></select></div>
+      <h3 style="margin:14px 0 4px" data-t="objective"></h3>
+      <div class="chips" id="objChips"></div>
+      <div class="eqn" id="eqn"></div>
+      <p id="magText" style="margin-top:12px"></p>
+    </div>
+    <div class="infobox"><h3 style="margin:0 0 4px" data-t="fovTitle"></h3><div id="fovSvg"></div><p class="small" id="fovText"></p></div>
+  </div>
+</section>
+<section id="cycle" class="reveal">
+  <h2><span class="em">♻️</span> <span data-t="cycTitle"></span></h2>
+  <p class="lead" data-t="cycLead"></p>
+  <div class="cycle">
+    <div><h3 style="margin:0 0 8px" data-t="cycPick"></h3><div class="cards7" id="cards7"></div></div>
+    <div><h3 style="margin:0 0 8px" data-t="cycSlots"></h3><div class="slots" id="slots"></div><div class="fb" id="cycFb"></div><div class="btnrow" style="margin-top:8px"><button class="btn sm ghost" id="cycReset" type="button" data-t="reset"></button></div></div>
+  </div>
+  <div id="medArt"></div>
+  <div class="note" data-t="medNote"></div>
+</section>
+<section id="quiz" class="reveal">
+  <h2><span class="em">🏆</span> <span data-t="quizTitle"></span></h2>
+  <p class="lead" data-t="quizLead"></p>
+  <div class="quizbox" id="quizBox"></div>
+</section>
+</main>
+<footer><span data-t="footer"></span><br><a href="index.html" style="color:var(--neon)" data-t="back"></a></footer>
+<canvas id="confetti"></canvas>
+<script>
+const $=s=>document.querySelector(s);
+const store=(()=>{try{const k="__t";localStorage.setItem(k,1);localStorage.removeItem(k);return localStorage}catch(e){return null}})();
+let lang=(store&&store.getItem("johann-lang"))||"de";
+const T={de:{
+navIntro:"Start",navAnimal:"Tier oder Pflanze?",navWhy:"Warum Obelia?",navTech:"Mikroskopieren",navDiag:"Diagramm",navMag:"Vergrößerung",navCycle:"Lebenszyklus",navQuiz:"Quiz",
+heroKicker:"Eine Mikroskop-Expedition für Johann",heroTitle:"Johanns Reise zu Obelia",
+heroText:"Sieht aus wie ein winziger Zweig – ist aber ein Tier! Obelia ist ein durchsichtiges Nesseltier, das auf Algen, Steinen und Muscheln im Meer wächst. Unter dem Mikroskop kannst du hineinschauen: Fresspolypen, Medusenknospen und sogar den Verdauungskanal.",heroBtn:"Los geht's ↓",
+animTitle:"Obelia: Tier, nicht Pflanze!",animLead:"Obelia bildet kleine, verzweigte Kolonien, die wie ein feines Pflänzchen aussehen. Sie gehört aber zu den Hydrozoen (Hydrozoa), einer Gruppe der Nesseltiere (Cnidaria) – wie Quallen, Seeanemonen und Korallen.",
+plantT:"🌱 Eine Pflanze …",obT:"🪼 Obelia (Tier) …",
+plant:["macht ihre Nahrung selbst (Photosynthese)","hat grüne Chloroplasten","hat Zellwände aus Cellulose","bleibt ihr Leben lang am Platz und fängt nichts"],
+ob:["fängt Beute (winzige Krebse, Plankton) mit Tentakeln","hat keine Chloroplasten – sie ist nicht grün","hat Nesselzellen zum Betäuben der Beute","bildet freischwimmende Medusen, die sich fortpflanzen"],
+animNote:"<b>Merke:</b> Obelia ist eine <b>Kolonie</b>: viele Polypen sitzen an einem gemeinsamen verzweigten Stock und teilen sich einen gemeinsamen Verdauungsraum. Der Stock ist von einer durchsichtigen Hülle aus <b>Chitin</b> geschützt – deshalb sieht sie ein bisschen wie ein Pflanzenstängel aus.",
+whyTitle:"Warum ist Obelia ein Mikroskop-Star?",whyLead:"Obelia ist nur wenige Millimeter bis ein paar Zentimeter groß und fast glasklar. Licht scheint einfach hindurch – so siehst du Dinge, die du bei den meisten Tieren erst aufschneiden müsstest.",
+w1t:"💡 Durchsichtig",w1:"Hülle und Gewebe sind so dünn und klar, dass das Licht des Mikroskops hindurchgeht (Durchlicht-Mikroskopie). Du siehst das Innere, ohne etwas aufzuschneiden.",
+w2t:"🍽️ Fresspolypen",w2:"Die <b>Hydranten</b> (Fresspolypen) haben einen Kranz aus Tentakeln und eine Mundöffnung. Sie fangen die Nahrung der Kolonie.",
+w3t:"🫧 Medusenknospen",w3:"In den flaschenförmigen <b>Gonotheken</b> sitzt der <b>Blastostyl</b> – ein Stab, an dem <b>Medusenknospen</b> wachsen. So siehst du die Fortpflanzung live.",
+w4t:"🧬 Zwei Körperformen",w4:"Polyp (festsitzend) und Meduse (freischwimmend): Obelia zeigt beides in einem Lebenszyklus – perfekt zum Vergleichen.",
+techTitle:"So mikroskopierst du richtig",techLead:"In der Schule benutzt ihr meist ein fertiges <b>Dauerpräparat</b> (Objektträger mit Obelia, eingebettet unter einem Deckglas). So gehst du vor:",
+steps:[["Mikroskop vorbereiten","Mit zwei Händen tragen (eine am Stativ, eine unter dem Fuß). Licht einschalten, <b>kleinste Vergrößerung</b> (4×) einrasten lassen."],["Präparat auflegen","Objektträger auf den Objekttisch legen, mit den Klammern festhalten und die Obelia mittig über das Licht schieben."],["Licht einstellen","Helligkeit und Blende (Diaphragma) so einstellen, dass du die Kontur gut siehst. Durchsichtige Objekte zeigen mehr Details bei <b>etwas weniger</b> Licht."],["Scharfstellen","Schau zuerst <b>von der Seite</b> und fahre den Tisch nach oben, bis das Objektiv fast das Glas berührt. Dann durchs Okular schauen und mit dem Grobtrieb langsam <b>auseinanderfahren</b>, bis das Bild scharf wird; danach mit dem Feintrieb verfeinern."],["Von klein nach groß","Interessante Stelle in die Bildmitte schieben, dann auf 10× und zuletzt auf 40× wechseln. Bei starken Vergrößerungen nur noch den <b>Feintrieb</b> benutzen."],["Zeichnen & beschriften","Zeichne mit Bleistift, was du siehst (Hydranten, Gonotheken, Stängel) und notiere die Gesamtvergrößerung dazu."]],
+techWarn:"⚠️ <b>Wichtig:</b> Nie mit dem Grobtrieb <i>auf</i> das Präparat zufahren, vor allem nicht bei 40×! Sonst können Objektiv und Objektträger kaputtgehen. Immer vom Objekt <b>weg</b> scharfstellen.",
+lookFor:"<b>Darauf kannst du achten:</b> Den Zickzack-Stängel · die Hydranten mit Tentakelkranz · Gonotheken mit Medusenknospen · den dünnen, helleren Rand (Perisark) um das Gewebe · den Hohlraum in der Mitte, der durch den ganzen Stock führt.",
+diagTitle:"Die Obelia-Kolonie im Detail",diagLead:"So würdest du sie (stark schematisch) unter dem Mikroskop sehen. Tippe auf einen Teil, um ihn kennenzulernen – oder starte den Suchmodus und finde die Teile selbst!",
+mExplore:"🔎 Entdecken",mFind:"🎯 Finde das Teil",diagCap:"Schematische Zeichnung – echte Kolonien haben viel mehr Zweige.",badgesOn:"🔢 Nummern ausblenden",badgesOff:"🔢 Nummern zeigen",
+pickPart:"👆 Tippe auf einen Teil der Zeichnung oder wähle ihn aus der Liste.",
+findIntro:"Du bekommst 8 Teile nacheinander. Tippe das richtige Teil in der Zeichnung an!",findStart:"Start",findTap:"Tippe auf:",findRound:"Runde",findScore:"Punkte",
+findRight:"✅ Richtig!",findWrong:"❌ Das war: ",findTry:" – versuch es nochmal!",findDone:"Geschafft!",findAgain:"Nochmal spielen",
+tryAgain:"Nochmal",inMicro:"Unter dem Mikroskop",
+magTitle:"Wie stark vergrößert dein Mikroskop?",magLead:"Gesamtvergrößerung = Okular × Objektiv. Wähle ein Objektiv und schau, wie viel von einem Hydranten (etwa 1 mm groß) ins Bild passt.",
+eyepiece:"Okular",objective:"Objektiv",fovTitle:"Das siehst du im Sehfeld",
+magRes:"Der Hydranten-Polyp (ca. 1 mm) wirkt also so, als wäre er etwa {n} mm groß – aber du siehst immer nur einen kleinen Ausschnitt.",
+fovText:"Sehfeld ≈ {f} mm Durchmesser (typisch bei Sehfeldzahl 18 mm)",
+cycTitle:"Der Lebenszyklus von Obelia",cycLead:"Obelia wechselt zwischen zwei Körperformen: dem festsitzenden <b>Polypen</b> und der freischwimmenden <b>Meduse</b>. Bringe die Schritte in die richtige Reihenfolge – wir starten bei der Meduse.",
+cycPick:"Tippe die Karten der Reihe nach an:",cycSlots:"Deine Reihenfolge:",
+cyc:[["🪼","Die erwachsene <b>Meduse</b> gibt Eizellen und Spermien ins Wasser ab."],["🥚","Eine Eizelle wird befruchtet – es entsteht eine <b>Zygote</b>."],["🐛","Aus der Zygote wird eine bewimperte, schwimmende <b>Planula-Larve</b>."],["⚓","Die Larve setzt sich auf einer festen Unterlage fest und wird zum ersten <b>Polypen</b>."],["🌿","Der Polyp wächst durch <b>Knospung</b> zu einer verzweigten Kolonie."],["🫧","In <b>Gonotheken</b> bilden sich am Blastostyl <b>Medusenknospen</b>."],["🌊","Kleine <b>Medusen</b> lösen sich ab und schwimmen davon – der Kreis schließt sich."]],
+cycRight:"✅ Richtig! ",cycWrong:"❌ Noch nicht – welcher Schritt kommt als Nächstes?",cycDone:"🎉 Perfekt! Der Kreislauf ist geschlossen – danach beginnt alles von vorn.",
+medNote:"<b>Wusstest du?</b> Die Medusen entstehen durch Knospung (ungeschlechtlich), pflanzen sich dann aber geschlechtlich fort. Die Obelia-Meduse ist nur wenige Millimeter klein – du brauchst das Mikroskop (oder eine Lupe), um sie anzusehen.",
+reset:"↺ Neu starten",
+quizTitle:"Das große Obelia-Quiz 🏆",quizLead:"Zeig, was du gelernt hast! 12 Fragen – manche beantwortest du mit einem Knopf, bei anderen tippst du das richtige Teil in der Zeichnung an.",
+qOf:"Frage",score:"Punkte",next:"Weiter →",finish:"Ergebnis ansehen",right:"✅ Richtig! ",wrong:"❌ Leider nicht. ",
+res0:"Schau dir die Abschnitte oben nochmal an und versuch es erneut – du schaffst das!",res1:"Gut gemacht! Mit etwas Übung wirst du zum Obelia-Profi.",res2:"Hervorragend! Du bist ein echter Mikroskop-Experte!",
+resTitle:"Dein Ergebnis",
+footer:"Gemacht für Johann ❤️ · Funktioniert auch ohne Internet.",back:"← Zurück zum Periodensystem",
+P:{
+hydranth:["Hydranth (Fresspolyp)","Der Fresspolyp der Kolonie: ein Körper mit Mund und Tentakelkranz. Er fängt und verdaut Beute für alle.","Ein kleiner Schlauch mit „Krone“ aus Fäden am oberen Ende."],
+tentacle:["Tentakel","Fangarme mit Nesselzellen (Nematocysten), die Beute betäuben und festhalten.","Dünne Fäden mit kleinen Knöpfchen – dort sitzen die Nesselzellen."],
+mouth:["Mund / Hypostom","Die Öffnung zum Verdauungsraum auf einem kleinen Kegel (Hypostom) in der Mitte der Tentakel. Hier kommt Nahrung rein und Unverdaubares wieder raus.","Ein kleiner Kegel in der Mitte des Tentakelkranzes."],
+hydrotheca:["Hydrotheka (Becher)","Ein durchsichtiger Becher aus Chitin, in den sich der Hydranth bei Gefahr zurückziehen kann.","Ein glasklarer Becher um den Polypen – oft nur als feine Linie zu sehen."],
+gonotheca:["Gonotheka","Eine flaschenförmige Hülle, in der die Medusen entstehen. Sie ist größer und dicker als ein Hydranten-Becher.","Flaschenform mit Hals – oft in der Gabelung am Stängel."],
+blastostyle:["Blastostyl","Der Stab in der Gonotheka. Er ist ein umgebauter Polyp ohne Mund und trägt die Medusenknospen.","Ein Stab in der Mitte der Gonotheka, an dem „Perlen“ hängen."],
+bud:["Medusenknospe","Junge Medusen, die am Blastostyl heranwachsen. Weiter oben sind sie größer und älter – gleich werden sie freigelassen.","Kleine Kügelchen am Blastostyl, oben größer als unten."],
+perisarc:["Perisark","Die durchsichtige, feste Außenhülle aus Chitin. Sie stützt und schützt die Kolonie – sie ist <i>nicht</i> lebendig.","Eine feine, helle Hülle außen um das rosa Gewebe."],
+coenosarc:["Coenosark","Das lebende Gewebe im Inneren des Stocks, das alle Polypen verbindet. Es sitzt innerhalb des Perisarks.","Die farbige Gewebeschicht innen – sie ist durchgehend."],
+gastro:["Gastrovaskularraum","Der gemeinsame Hohlraum im Coenosark. Er dient als Darm <i>und</i> als Verteiler: Verdaute Nahrung gelangt durch ihn zu allen Polypen.","Ein durchgehender Kanal in der Mitte des Stängels."]}
+},en:{
+navIntro:"Start",navAnimal:"Animal or plant?",navWhy:"Why Obelia?",navTech:"Using the microscope",navDiag:"Diagram",navMag:"Magnification",navCycle:"Life cycle",navQuiz:"Quiz",
+heroKicker:"A microscope expedition for Johann",heroTitle:"Johann's Journey to Obelia",
+heroText:"It looks like a tiny twig – but it's an animal! Obelia is a see-through cnidarian that grows on seaweed, stones and shells in the sea. Under the microscope you can look right inside: feeding polyps, medusa buds and even the digestive channel.",heroBtn:"Let's go ↓",
+animTitle:"Obelia: an animal, not a plant!",animLead:"Obelia forms small, branching colonies that look like a delicate little plant. But it belongs to the hydrozoans (Hydrozoa), a group of cnidarians (Cnidaria) – like jellyfish, sea anemones and corals.",
+plantT:"🌱 A plant …",obT:"🪼 Obelia (animal) …",
+plant:["makes its own food (photosynthesis)","has green chloroplasts","has cell walls made of cellulose","stays put all its life and doesn't catch anything"],
+ob:["catches prey (tiny crustaceans, plankton) with tentacles","has no chloroplasts – it isn't green","has stinging cells to stun its prey","makes free-swimming medusae that reproduce"],
+animNote:"<b>Remember:</b> Obelia is a <b>colony</b>: many polyps sit on one shared branching stalk and share one digestive space. The stalk is protected by a see-through coat of <b>chitin</b> – that's why it looks a bit like a plant stem.",
+whyTitle:"Why is Obelia a microscope star?",whyLead:"Obelia is only a few millimetres to a few centimetres big and almost glass-clear. Light simply shines through – so you see things you'd have to cut open most animals to find.",
+w1t:"💡 See-through",w1:"The coat and tissue are so thin and clear that the microscope's light passes through (transmitted-light microscopy). You see the inside without cutting anything.",
+w2t:"🍽️ Feeding polyps",w2:"The <b>hydranths</b> (feeding polyps) have a ring of tentacles and a mouth. They catch food for the whole colony.",
+w3t:"🫧 Medusa buds",w3:"Inside the bottle-shaped <b>gonothecae</b> sits the <b>blastostyle</b> – a rod where <b>medusa buds</b> grow. You can watch reproduction up close.",
+w4t:"🧬 Two body forms",w4:"Polyp (fixed in place) and medusa (free-swimming): Obelia shows both in one life cycle – perfect for comparing.",
+techTitle:"How to use the microscope properly",techLead:"At school you usually use a ready-made <b>prepared slide</b> (a glass slide with Obelia mounted under a coverslip). Here's how:",
+steps:[["Get ready","Carry the microscope with two hands (one on the arm, one under the base). Switch on the light and click the <b>lowest power</b> (4×) objective into place."],["Place the slide","Put the slide on the stage, hold it with the clips and move the Obelia over the middle of the light."],["Adjust the light","Set brightness and iris diaphragm so you can see the outlines. Transparent things show more detail with <b>a little less</b> light."],["Focus","First look <b>from the side</b> and raise the stage until the objective almost touches the glass. Then look through the eyepiece and slowly move them <b>apart</b> with the coarse knob until the image is sharp; finish with the fine knob."],["Low to high","Move an interesting spot to the centre, then switch to 10× and finally 40×. On higher powers use only the <b>fine focus</b>."],["Draw & label","Draw what you see in pencil (hydranths, gonothecae, stalk) and write the total magnification next to it."]],
+techWarn:"⚠️ <b>Important:</b> never focus <i>towards</i> the slide with the coarse knob, especially not at 40×! The objective and slide could break. Always focus <b>away</b> from the specimen.",
+lookFor:"<b>What to look for:</b> the zigzag stalk · hydranths with a ring of tentacles · gonothecae with medusa buds · the thin, lighter edge (perisarc) around the tissue · the hollow channel in the middle that runs through the whole colony.",
+diagTitle:"The Obelia colony up close",diagLead:"This is how you'd see it (very schematically) under the microscope. Tap a part to get to know it – or start the find mode and locate the parts yourself!",
+mExplore:"🔎 Explore",mFind:"🎯 Find the part",diagCap:"Schematic drawing – real colonies have many more branches.",badgesOn:"🔢 Hide numbers",badgesOff:"🔢 Show numbers",
+pickPart:"👆 Tap a part of the drawing or pick it from the list.",
+findIntro:"You get 8 parts, one after another. Tap the right part in the drawing!",findStart:"Start",findTap:"Tap the:",findRound:"Round",findScore:"Points",
+findRight:"✅ Correct!",findWrong:"❌ That was the ",findTry:" – try again!",findDone:"Done!",findAgain:"Play again",
+tryAgain:"Again",inMicro:"Under the microscope",
+magTitle:"How much does your microscope magnify?",magLead:"Total magnification = eyepiece × objective. Pick an objective and see how much of a hydranth (about 1 mm big) fits into view.",
+eyepiece:"Eyepiece",objective:"Objective",fovTitle:"What you see in the field of view",
+magRes:"So the hydranth polyp (about 1 mm) looks as if it were about {n} mm big – but you only ever see a small part of it.",
+fovText:"Field of view ≈ {f} mm across (typical for a field number of 18 mm)",
+cycTitle:"The life cycle of Obelia",cycLead:"Obelia switches between two body forms: the fixed <b>polyp</b> and the free-swimming <b>medusa</b>. Put the steps in the right order – we start with the medusa.",
+cycPick:"Tap the cards in order:",cycSlots:"Your order:",
+cyc:[["🪼","The adult <b>medusa</b> releases eggs and sperm into the water."],["🥚","An egg is fertilised – a <b>zygote</b> forms."],["🐛","The zygote becomes a swimming, ciliated <b>planula larva</b>."],["⚓","The larva settles on a solid surface and becomes the first <b>polyp</b>."],["🌿","The polyp grows by <b>budding</b> into a branching colony."],["🫧","Inside <b>gonothecae</b>, <b>medusa buds</b> form on the blastostyle."],["🌊","Little <b>medusae</b> break free and swim away – the circle is complete."]],
+cycRight:"✅ Correct! ",cycWrong:"❌ Not yet – which step comes next?",cycDone:"🎉 Perfect! The cycle is complete – then it all starts again.",
+medNote:"<b>Did you know?</b> The medusae are made by budding (asexual), but then reproduce sexually. The Obelia medusa is only a few millimetres across – you need a microscope (or a magnifying glass) to see it.",
+reset:"↺ Restart",
+quizTitle:"The Big Obelia Quiz 🏆",quizLead:"Show what you've learned! 12 questions – some you answer with a button, for others you tap the right part in the drawing.",
+qOf:"Question",score:"Score",next:"Next →",finish:"See result",right:"✅ Correct! ",wrong:"❌ Not quite. ",
+res0:"Have another look at the sections above and try again – you can do it!",res1:"Well done! With a bit more practice you'll be an Obelia pro.",res2:"Excellent! You're a real microscope expert!",
+resTitle:"Your result",
+footer:"Made for Johann ❤️ · Works without internet, too.",back:"← Back to the Periodic Table",
+P:{
+hydranth:["Hydranth (feeding polyp)","The colony's feeding polyp: a body with a mouth and a ring of tentacles. It catches and digests prey for everyone.","A small tube with a “crown” of threads at the top."],
+tentacle:["Tentacle","Arms with stinging cells (nematocysts) that stun and hold prey.","Thin threads with tiny knobs – the stinging cells sit there."],
+mouth:["Mouth / hypostome","The opening to the digestive space, on a small cone (hypostome) in the middle of the tentacles. Food goes in, and leftovers come out here.","A little cone in the middle of the tentacle ring."],
+hydrotheca:["Hydrotheca (cup)","A see-through cup of chitin that the hydranth can pull back into when in danger.","A glass-clear cup around the polyp – often just a thin line."],
+gonotheca:["Gonotheca","A bottle-shaped case in which the medusae develop. It is bigger and thicker than a hydranth's cup.","Bottle shape with a neck – often at the fork of the stalk."],
+blastostyle:["Blastostyle","The rod inside the gonotheca. It is a modified polyp without a mouth and carries the medusa buds.","A rod in the middle of the gonotheca with “beads” attached."],
+bud:["Medusa bud","Young medusae growing on the blastostyle. Higher up they are bigger and older – soon they'll be released.","Little beads on the blastostyle, bigger at the top than the bottom."],
+perisarc:["Perisarc","The see-through, firm outer coat of chitin. It supports and protects the colony – it is <i>not</i> alive.","A fine, light coat on the outside of the pink tissue."],
+coenosarc:["Coenosarc","The living tissue inside the stalk that connects all the polyps. It lies inside the perisarc.","The coloured layer of tissue inside – it runs all the way through."],
+gastro:["Gastrovascular cavity","The shared hollow space in the coenosarc. It works as gut <i>and</i> distributor: digested food travels through it to every polyp.","A continuous channel down the middle of the stalk."]}
+}};
+const t=k=>(T[lang][k]!==undefined?T[lang][k]:(T.de[k]!==undefined?T.de[k]:k));
+const PARTS=["hydranth","tentacle","mouth","hydrotheca","gonotheca","blastostyle","bud","perisarc","coenosarc","gastro"];
+const pname=p=>T[lang].P[p][0];
+const shuffle=a=>{a=a.slice();for(let i=a.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[a[i],a[j]]=[a[j],a[i]]}return a};
+
+// ---------- SVG drawing
+const C={peri:"#e0a74b",coen:"#ff9fb8",gas:"#6b3fa0"};
+const hp=(p,inner)=>'<g class="hs" data-p="'+p+'">'+inner+'</g>';
+function hydranthSVG(){
+  let s='<path class="hs" data-p="hydrotheca" d="M-13,0 L-20,-36 L20,-36 L13,0Z" fill="rgba(224,167,75,.14)" stroke="'+C.peri+'" stroke-width="3" stroke-linejoin="round"/>';
+  s+='<path class="hs" data-p="hydranth" d="M-9,0 L-12,-34 Q0,-46 12,-34 L9,0Z" fill="'+C.coen+'"/>';
+  s+='<path class="hs" data-p="gastro" d="M-3.5,0 L-6,-30 Q0,-36 6,-30 L3.5,0Z" fill="'+C.gas+'" opacity=".85"/>';
+  [-75,-55,-35,-15,15,35,55,75].forEach(a=>{
+    const r=a*Math.PI/180,x0=Math.sin(r)*10,y0=-38,x1=x0+Math.sin(r)*34,y1=y0-Math.cos(r)*34;
+    s+=hp("tentacle",'<line x1="'+x0.toFixed(1)+'" y1="'+y0+'" x2="'+x1.toFixed(1)+'" y2="'+y1.toFixed(1)+'" stroke="rgba(0,0,0,0)" stroke-width="12" stroke-linecap="round"/><line x1="'+x0.toFixed(1)+'" y1="'+y0+'" x2="'+x1.toFixed(1)+'" y2="'+y1.toFixed(1)+'" stroke="'+C.coen+'" stroke-width="2.6" stroke-linecap="round"/><circle cx="'+x1.toFixed(1)+'" cy="'+y1.toFixed(1)+'" r="3.6" fill="#ffd0dc"/>');
+  });
+  s+='<ellipse class="hs" data-p="mouth" cx="0" cy="-46" rx="7.5" ry="8.5" fill="#ffc2d4"/><ellipse class="hs" data-p="mouth" cx="0" cy="-52" rx="3.2" ry="2.6" fill="#3a0f2a"/>';
+  return s;
+}
+function gonoSVG(){
+  let s='<path class="hs" data-p="gonotheca" d="M-8,0 L-19,-26 L-19,-56 Q-19,-76 -7,-80 L7,-80 Q19,-76 19,-56 L19,-26 L8,0Z" fill="rgba(224,167,75,.16)" stroke="'+C.peri+'" stroke-width="3.2" stroke-linejoin="round"/>';
+  s+='<rect class="hs" data-p="blastostyle" x="-4.5" y="-70" width="9" height="68" rx="4.5" fill="'+C.coen+'"/>';
+  [[-12,-22,6],[12,-30,7],[-12,-44,8],[12,-52,8.5],[0,-68,8]].forEach(b=>{s+='<circle class="hs" data-p="bud" cx="'+b[0]+'" cy="'+b[1]+'" r="'+b[2]+'" fill="#ffc2d4" stroke="'+C.gas+'" stroke-width="1.6"/>'});
+  return s;
+}
+const V=[[300,500],[278,410],[322,320],[278,230],[322,140],[300,75]];
+const HY=[{tx:222,ty:350,a:-43,v:1},{tx:380,ty:262,a:44,v:2},{tx:220,ty:172,a:-45,v:3},{tx:380,ty:82,a:45,v:4},{tx:300,ty:75,a:0,v:5}];
+const GO=[{tx:322,ty:320,a:-60},{tx:278,ty:230,a:60}];
+const loc=(g,x,y)=>{const r=g.a*Math.PI/180;return[g.tx+x*Math.cos(r)-y*Math.sin(r),g.ty+x*Math.sin(r)+y*Math.cos(r)]};
+function layers(d,w){return['perisarc','coenosarc','gastro'].map((p,i)=>'<path class="hs" data-p="'+p+'" d="'+d+'" fill="none" stroke="'+[C.peri,C.coen,C.gas][i]+'" stroke-width="'+[w,w*.62,w*.28][i]+'" stroke-linecap="round" stroke-linejoin="round"'+(i==2?' opacity=".85"':'')+'/>').join('')}
+function badgesSVG(){
+  const out=[];
+  const grp=(parts,anchors,bx,y0,dy)=>{
+    const idx=parts.map((p,i)=>i).sort((a,b)=>anchors[a][1]-anchors[b][1]);
+    idx.forEach((i,k)=>{const n=PARTS.indexOf(parts[i])+1,by=y0+k*dy,[ax,ay]=anchors[i];
+      out.push('<g class="badge"><line x1="'+ax.toFixed(1)+'" y1="'+ay.toFixed(1)+'" x2="'+bx+'" y2="'+by+'"/><circle cx="'+bx+'" cy="'+by+'" r="12"/><text x="'+bx+'" y="'+by+'">'+n+'</text></g>')});
+  };
+  const h=HY[0],g=GO[1];
+  grp(["tentacle","mouth","hydranth","hydrotheca"],[loc(h,-30,-58),loc(h,0,-52),loc(h,0,-18),loc(h,-16,-14)],36,230,36);
+  grp(["gonotheca","blastostyle","bud"],[loc(g,19,-40),loc(g,0,-30),loc(g,12,-52)],560,120,40);
+  grp(["perisarc","coenosarc","gastro"],[[301,455],[296,455],[289,455]],520,430,32);
+  return out.join('');
+}
+function colonySVG(badges,hero){
+  let s='<svg viewBox="0 -20 600 560" role="img" aria-label="Obelia">';
+  s+='<path d="M170,512 Q300,500 430,512" stroke="#7a5a2b" stroke-width="12" fill="none" stroke-linecap="round" opacity=".8"/><path d="M130,530 Q300,515 470,530 L470,545 L130,545Z" fill="rgba(122,90,43,.35)"/>';
+  GO.forEach(g=>{s+='<g transform="translate('+g.tx+','+g.ty+') rotate('+g.a+')">'+gonoSVG()+'</g>'});
+  s+=layers("M"+V.map(v=>v.join(",")).join(" L"),28);
+  HY.forEach(h=>{
+    if(h.v<5){const v=V[h.v];s+=layers("M"+v[0]+","+v[1]+" L"+h.tx+","+h.ty,22)}
+    s+='<g transform="translate('+h.tx+','+h.ty+') rotate('+h.a+')">'+hydranthSVG()+'</g>';
+  });
+  if(badges)s+=badgesSVG();
+  return s+'</svg>';
+}
+function medusaSVG(){
+  let s='<svg viewBox="0 0 240 220" class="fov" role="img" aria-label="Medusa">';
+  s+='<path d="M30,110 Q30,30 120,30 Q210,30 210,110 Q120,125 30,110Z" fill="rgba(255,159,184,.35)" stroke="'+C.coen+'" stroke-width="3"/>';
+  s+='<path d="M120,112 L120,160" stroke="'+C.coen+'" stroke-width="9" stroke-linecap="round"/><ellipse cx="120" cy="166" rx="9" ry="6" fill="#3a0f2a"/>';
+  [[75,70],[165,70]].forEach(p=>{s+='<ellipse cx="'+p[0]+'" cy="'+p[1]+'" rx="16" ry="9" fill="#ffc2d4" stroke="'+C.gas+'" stroke-width="1.6"/>'});
+  for(let i=0;i<14;i++){const x=34+i*13.5;s+='<path d="M'+x.toFixed(1)+',114 q'+(i%2?-6:6)+',22 0,44" stroke="#ffd0dc" stroke-width="2" fill="none"/>'}
+  return s+'</svg>';
+}
+// ---------- diagram section
+let mode="explore",sel=null,showBadges=true;
+let F={on:false,round:0,score:0,seq:[],missed:false,done:false,msg:""};
+const FROUNDS=8;
+function drawColony(){$("#colony").innerHTML=colonySVG(showBadges)}
+function setHS(root,cls,p,on){root.querySelectorAll('.hs[data-p="'+p+'"]').forEach(e=>e.classList.toggle(cls,on))}
+function clearHS(root){root.querySelectorAll(".hs.sel,.hs.good,.hs.bad").forEach(e=>e.classList.remove("sel","good","bad"))}
+function renderDiagram(){
+  $("#mExplore").textContent=t("mExplore");$("#mFind").textContent=t("mFind");
+  $("#mExplore").classList.toggle("ghost",mode!=="explore");$("#mExplore").classList.toggle("on",mode==="explore");
+  $("#mFind").classList.toggle("ghost",mode!=="find");$("#mFind").classList.toggle("on",mode==="find");
+  $("#bBadges").textContent=t(showBadges?"badgesOn":"badgesOff");
+  drawColony();
+  const box=$("#diagInfo"),pl=$("#partList");
+  if(mode==="explore"){
+    pl.style.display="flex";
+    pl.innerHTML=PARTS.map((p,i)=>'<button type="button" data-p="'+p+'" class="'+(sel===p?"on":"")+'">'+(i+1)+' · '+pname(p)+'</button>').join("");
+    if(sel){const d=T[lang].P[sel];setHS($("#colony"),"sel",sel,true);
+      box.innerHTML='<div class="big"><span class="pill">'+(PARTS.indexOf(sel)+1)+'</span> '+d[0]+'</div><p>'+d[1]+'</p><div class="fact"><b>🔬 '+t("inMicro")+':</b> '+d[2]+'</div>'}
+    else box.innerHTML='<p>'+t("pickPart")+'</p>';
+  }else{
+    pl.style.display="none";
+    if(!F.on&&!F.done)box.innerHTML='<p>'+t("findIntro")+'</p><button class="btn" type="button" id="fStart">'+t("findStart")+'</button>';
+    else if(F.done)box.innerHTML='<div class="result"><div class="trophy">🏆</div><div class="big">'+t("findDone")+' '+F.score+' / '+FROUNDS+'</div></div><button class="btn" type="button" id="fStart">'+t("findAgain")+'</button>';
+    else box.innerHTML='<div class="qtop"><span>'+t("findRound")+' '+(F.round+1)+' / '+FROUNDS+'</span><span>'+t("findScore")+': '+F.score+'</span></div><div class="bar"><i style="width:'+(F.round/FROUNDS*100)+'%"></i></div><div class="small" style="text-align:left">'+t("findTap")+'</div><div class="target">'+pname(F.seq[F.round])+'</div><div class="fb">'+F.msg+'</div>';
+    const b=$("#fStart");if(b)b.onclick=startFind;
+  }
+}
+function startFind(){F={on:true,round:0,score:0,seq:shuffle(PARTS).slice(0,FROUNDS),missed:false,done:false,msg:""};renderDiagram()}
+function colonyClick(p){
+  const root=$("#colony");
+  if(mode==="explore"){sel=p;clearHS(root);renderDiagram();return}
+  if(!F.on)return;
+  const tgt=F.seq[F.round];clearHS(root);
+  if(p===tgt){
+    setHS(root,"good",p,true);if(!F.missed)F.score++;F.msg=t("findRight");
+    const done=++F.round>=FROUNDS;
+    if(done){F.on=false;F.done=true}
+    renderDiagram();setHS($("#colony"),"good",p,true);
+    if(done){if(F.score>=6)celebrate()}
+    else setTimeout(()=>{F.msg="";F.missed=false;renderDiagram()},800);
+  }else{
+    F.missed=true;F.msg='<span class="w">'+t("findWrong")+pname(p)+t("findTry")+'</span>';
+    renderDiagram();setHS($("#colony"),"bad",p,true);$("#diagInfo").classList.remove("shake");void $("#diagInfo").offsetWidth;$("#diagInfo").classList.add("shake");
+  }
+}
+function hsTarget(e){const el=e.target.closest&&e.target.closest(".hs");return el?el.dataset.p:null}
+$("#colony").addEventListener("click",e=>{const p=hsTarget(e);if(p)colonyClick(p)});
+$("#partList").addEventListener("click",e=>{const b=e.target.closest("button");if(b){sel=b.dataset.p;renderDiagram()}});
+$("#mExplore").onclick=()=>{mode="explore";renderDiagram()};
+$("#mFind").onclick=()=>{mode="find";renderDiagram()};
+$("#bBadges").onclick=()=>{showBadges=!showBadges;renderDiagram()};
+// ---------- magnification
+let eye=10,obj=10;
+function renderMag(){
+  $("#objChips").innerHTML=[4,10,40].map(o=>'<button type="button" class="chip '+(o===obj?"on":"")+'" data-o="'+o+'">'+o+'×</button>').join("");
+  const m=eye*obj;
+  $("#eqn").innerHTML='<span>'+eye+'×</span><span>×</span><span>'+obj+'×</span><span>=</span><span class="res">'+m+'×</span>';
+  const n=m>=100?(m/10)+" cm":m+" mm";
+  $("#magText").innerHTML=t("magRes").replace("{n} mm",n);
+  const f=18/obj,sc=(200/f)/75;
+  $("#fovSvg").innerHTML='<svg class="fov" viewBox="0 0 200 200"><defs><clipPath id="fovclip"><circle cx="100" cy="100" r="98"/></clipPath></defs><circle cx="100" cy="100" r="98" fill="rgba(255,255,255,.12)" stroke="var(--neon)" stroke-width="3"/><g clip-path="url(#fovclip)"><g transform="translate(100,'+(100+37*sc)+') scale('+sc+')" style="pointer-events:none">'+hydranthSVG()+'</g></g></svg>';
+  $("#fovText").textContent=t("fovText").replace("{f}",f.toFixed(2).replace(/\.?0+$/,""));
+}
+$("#objChips").addEventListener("click",e=>{const b=e.target.closest("button");if(b){obj=+b.dataset.o;renderMag()}});
+$("#selEye").onchange=e=>{eye=+e.target.value;renderMag()};
+// ---------- life cycle
+let cyc={order:[],deck:shuffle([0,1,2,3,4,5,6]),msg:"",cls:""};
+function renderCycle(){
+  const L=T[lang].cyc;
+  $("#cards7").innerHTML=cyc.deck.map(i=>'<button type="button" class="cc" data-i="'+i+'"'+(cyc.order.indexOf(i)>=0?" disabled":"")+'><span class="em2">'+L[i][0]+'</span>'+L[i][1]+'</button>').join("");
+  $("#slots").innerHTML=L.map((x,k)=>{const i=cyc.order[k];return i!==undefined?'<div class="slot full"><b class="n">'+(k+1)+'</b><span>'+L[i][0]+' '+L[i][1]+'</span></div>':'<div class="slot"><b class="n">'+(k+1)+'</b><span>…</span></div>'}).join("");
+  $("#cycFb").innerHTML=cyc.msg;
+}
+$("#cards7").addEventListener("click",e=>{
+  const b=e.target.closest("button");if(!b||b.disabled)return;const i=+b.dataset.i;
+  if(i===cyc.order.length){cyc.order.push(i);cyc.msg=cyc.order.length===7?'<span class="r">'+t("cycDone")+'</span>':'<span class="r">'+t("cycRight")+'</span>';renderCycle();if(cyc.order.length===7)celebrate()}
+  else{cyc.msg='<span class="w">'+t("cycWrong")+'</span>';renderCycle();const nb=$('#cards7 [data-i="'+i+'"]');if(nb){nb.classList.add("shake")}}
+});
+$("#cycReset").onclick=()=>{cyc={order:[],deck:shuffle([0,1,2,3,4,5,6]),msg:"",cls:""};renderCycle()};
+
+// ---------- quiz
+const Q=[
+{a:1,de:{q:"Zu welcher Gruppe gehört Obelia?",o:["Pflanzen","Nesseltiere (Tiere)","Pilze","Algen"],e:"Obelia ist ein Hydrozoon und gehört zu den Nesseltieren – sie ist ein Tier."},en:{q:"Which group does Obelia belong to?",o:["Plants","Cnidarians (animals)","Fungi","Algae"],e:"Obelia is a hydrozoan, a cnidarian – it is an animal."}},
+{a:2,de:{q:"Woran erkennst du, dass Obelia ein Tier ist?",o:["Sie hat Chloroplasten","Sie macht Zucker aus Sonnenlicht","Sie fängt Beute mit Tentakeln","Sie hat Zellwände aus Cellulose"],e:"Tiere fressen. Obelia fängt Plankton mit ihren Tentakeln."},en:{q:"How can you tell Obelia is an animal?",o:["It has chloroplasts","It makes sugar from sunlight","It catches prey with tentacles","It has cellulose cell walls"],e:"Animals eat. Obelia catches plankton with its tentacles."}},
+{tap:"hydranth",de:{q:"Tippe in der Zeichnung auf einen Hydranten (Fresspolyp).",e:"Der Hydranth ist der Fresspolyp mit Mund und Tentakelkranz."},en:{q:"Tap a hydranth (feeding polyp) in the drawing.",e:"The hydranth is the feeding polyp with a mouth and ring of tentacles."}},
+{a:1,de:{q:"Wo wachsen die Medusenknospen?",o:["In den Hydrotheken","In den Gonotheken","Im Perisark","In den Tentakeln"],e:"Die Gonothek enthält den Blastostyl, an dem die Medusenknospen sitzen."},en:{q:"Where do the medusa buds grow?",o:["In the hydrothecae","In the gonothecae","In the perisarc","In the tentacles"],e:"The gonotheca contains the blastostyle that carries the medusa buds."}},
+{a:2,de:{q:"Wie heißt die durchsichtige, feste Chitinhülle um das Gewebe?",o:["Coenosark","Blastostyl","Perisark","Hypostom"],e:"Das Perisark stützt und schützt die Kolonie. Das lebende Gewebe darin heißt Coenosark."},en:{q:"What is the see-through, firm chitin coat around the tissue called?",o:["Coenosarc","Blastostyle","Perisarc","Hypostome"],e:"The perisarc supports and protects the colony. The living tissue inside is the coenosarc."}},
+{a:0,de:{q:"Wozu dient der Gastrovaskularraum?",o:["Als Darm und Verteiler der Nahrung für alle Polypen","Zur Photosynthese","Zum Schwimmen","Als Schutzpanzer"],e:"Verdaute Nahrung fließt durch den gemeinsamen Hohlraum zu allen Polypen der Kolonie."},en:{q:"What is the gastrovascular cavity for?",o:["As gut and food distributor for all polyps","For photosynthesis","For swimming","As a protective shell"],e:"Digested food flows through the shared cavity to all polyps in the colony."}},
+{tap:"blastostyle",de:{q:"Tippe auf den Blastostyl (den Stab mit den Medusenknospen).",e:"Der Blastostyl steckt mitten in der Gonotheka."},en:{q:"Tap the blastostyle (the rod carrying the medusa buds).",e:"The blastostyle sits in the middle of the gonotheca."}},
+{a:1,de:{q:"Warum eignet sich Obelia gut fürs Lichtmikroskop?",o:["Weil sie riesig ist","Weil sie dünn und durchsichtig ist und das Licht hindurchgeht","Weil sie leuchtet","Weil sie sich sehr schnell bewegt"],e:"Durchsichtige Objekte lassen das Licht durch – so sieht man das Innere."},en:{q:"Why is Obelia good for a light microscope?",o:["Because it is huge","Because it is thin and transparent, so light passes through","Because it glows","Because it moves very fast"],e:"Transparent specimens let light through – so you can see the inside."}},
+{a:2,de:{q:"Okular 10×, Objektiv 10×. Wie groß ist die Gesamtvergrößerung?",o:["20×","1000×","100×","10×"],e:"Okular × Objektiv: 10 × 10 = 100×."},en:{q:"Eyepiece 10×, objective 10×. What is the total magnification?",o:["20×","1000×","100×","10×"],e:"Eyepiece × objective: 10 × 10 = 100×."}},
+{a:1,de:{q:"Mit welchem Objektiv fängst du beim Scharfstellen an?",o:["Mit dem stärksten (40×)","Mit dem schwächsten (4×)","Egal, irgendeins","Mit keinem – nur Okular"],e:"Immer klein anfangen: Dort findest du das Objekt am leichtesten und nichts stößt an."},en:{q:"Which objective do you start with when focusing?",o:["The strongest (40×)","The weakest (4×)","Doesn't matter","None – eyepiece only"],e:"Always start small: the specimen is easiest to find and nothing bumps into the slide."}},
+{a:0,de:{q:"Welchen Knopf benutzt du bei 40× zum Scharfstellen?",o:["Nur den Feintrieb","Den Grobtrieb","Die Blende","Beide Triebe kräftig"],e:"Bei 40× ist das Objektiv ganz nah am Glas – nur sanft mit dem Feintrieb arbeiten."},en:{q:"Which knob do you use to focus at 40×?",o:["Only the fine focus","The coarse focus","The diaphragm","Both knobs hard"],e:"At 40× the objective is very close to the glass – use only the fine focus, gently."}},
+{a:1,de:{q:"Welche Körperform von Obelia schwimmt frei im Wasser?",o:["Der Polyp","Die Meduse","Die Gonotheka","Das Perisark"],e:"Der Polyp sitzt fest, die kleine Meduse schwimmt frei."},en:{q:"Which body form of Obelia swims freely?",o:["The polyp","The medusa","The gonotheca","The perisarc"],e:"The polyp is fixed, the little medusa swims freely."}}
+];
+let qs={i:0,score:0,done:false,ans:null};
+function renderQuiz(){
+  const box=$("#quizBox");
+  if(qs.done){
+    const n=Q.length,r=qs.score/n,msg=r<.5?t("res0"):r<.8?t("res1"):t("res2");
+    box.innerHTML='<div class="result"><div class="trophy">'+(r<.5?"🔬":r<.8?"🥈":"🏆")+'</div><h3 style="font-size:32px;margin:6px 0">'+t("resTitle")+': '+qs.score+' / '+n+'</h3><p class="lead" style="margin:0 auto 16px">'+msg+'</p><button class="btn" type="button" id="qAgain">'+t("reset")+'</button></div>';
+    $("#qAgain").onclick=()=>{qs={i:0,score:0,done:false,ans:null};renderQuiz()};return;
+  }
+  const q=Q[qs.i],d=q[lang];
+  let h='<div class="qtop"><span>'+t("qOf")+' '+(qs.i+1)+' / '+Q.length+'</span><span>'+t("score")+': '+qs.score+'</span></div><div class="bar"><i style="width:'+(qs.i/Q.length*100)+'%"></i></div><div class="qq">'+d.q+'</div>';
+  if(q.tap)h+='<div class="svgbox" id="qSvg" style="max-width:560px;margin:0 auto">'+colonySVG(false)+'</div>';
+  else h+='<div class="opts">'+d.o.map((o,i)=>'<button type="button" class="opt" data-i="'+i+'">'+o+'</button>').join("")+'</div>';
+  h+='<div class="fb" id="qFb"></div><div id="qNext"></div>';
+  box.innerHTML=h;
+  if(qs.ans!==null)showAns();
+  if(q.tap)$("#qSvg").addEventListener("click",e=>{const p=hsTarget(e);if(p&&qs.ans===null)answer(p===q.tap?1:0,p)});
+  else box.querySelectorAll(".opt").forEach(b=>b.onclick=()=>{if(qs.ans===null)answer(+b.dataset.i===q.a?1:0,+b.dataset.i)});
+}
+function answer(ok,what){
+  qs.ans={ok,what};if(ok)qs.score++;showAns(true);
+  if(ok&&qs.i===Q.length-1&&qs.score>=10)setTimeout(celebrate,300);
+}
+function showAns(fresh){
+  const q=Q[qs.i],d=q[lang],ok=qs.ans.ok;
+  if(q.tap){const root=$("#qSvg");setHS(root,"good",q.tap,true);if(!ok)setHS(root,"bad",qs.ans.what,true);root.style.pointerEvents="none"}
+  else document.querySelectorAll("#quizBox .opt").forEach((b,i)=>{b.disabled=true;if(i===q.a)b.classList.add("good");else if(i===qs.ans.what)b.classList.add("bad")});
+  $("#qFb").innerHTML=(ok?'<span class="r">'+t("right")+'</span>':'<span class="w">'+t("wrong")+'</span>')+d.e;
+  $("#qNext").innerHTML='<button class="btn" type="button" id="qNextBtn" style="margin-top:14px">'+(qs.i===Q.length-1?t("finish"):t("next"))+'</button>';
+  $("#qNextBtn").onclick=()=>{if(qs.i===Q.length-1)qs.done=true;else qs.i++;qs.ans=null;renderQuiz()};
+  if(ok&&fresh&&q.tap)burst&&burst(25);
+}
+// ---------- text pieces & language
+function renderTexts(){
+  $("#plantUl").innerHTML=T[lang].plant.map(x=>"<li>"+x+"</li>").join("");
+  $("#obUl").innerHTML=T[lang].ob.map(x=>"<li>"+x+"</li>").join("");
+  $("#steps").innerHTML=T[lang].steps.map(s=>'<div class="step"><h3>'+s[0]+'</h3><p>'+s[1]+'</p></div>').join("");
+}
+function applyLang(){
+  document.documentElement.lang=lang;
+  document.title=t("heroTitle");
+  document.querySelectorAll("[data-t]").forEach(el=>{el.innerHTML=t(el.dataset.t)});
+  $("#lde").classList.toggle("on",lang==="de");$("#len").classList.toggle("on",lang==="en");
+  renderTexts();renderDiagram();renderMag();renderCycle();renderQuiz();
+}
+function setLang(l){lang=l;if(store)store.setItem("johann-lang",l);applyLang()}
+
+// ---------- confetti
+const cv=$("#confetti"),cx=cv.getContext("2d");let parts=[],raf=null;
+function sizeCv(){const r=window.devicePixelRatio||1;cv.width=innerWidth*r;cv.height=innerHeight*r;cx.setTransform(r,0,0,r,0,0)}
+addEventListener("resize",sizeCv);sizeCv();
+function burst(n,x,y){
+  const cols=["#5cf2ff","#ff5ca8","#ffe066","#69db7c","#9775fa","#ffa94d"];
+  for(let i=0;i<n;i++)parts.push({x:x!==undefined?x:innerWidth/2,y:y!==undefined?y:innerHeight*0.45,vx:(Math.random()-.5)*14,vy:-Math.random()*13-4,s:5+Math.random()*7,r:Math.random()*6,vr:(Math.random()-.5)*.3,c:cols[i%cols.length],life:140+Math.random()*60});
+  if(!raf)raf=requestAnimationFrame(tick);
+}
+function tick(){
+  cx.clearRect(0,0,innerWidth,innerHeight);
+  parts.forEach(p=>{p.vy+=.28;p.vx*=.99;p.x+=p.vx;p.y+=p.vy;p.r+=p.vr;p.life--;cx.save();cx.translate(p.x,p.y);cx.rotate(p.r);cx.fillStyle=p.c;cx.fillRect(-p.s/2,-p.s/4,p.s,p.s/2);cx.restore()});
+  parts=parts.filter(p=>p.life>0&&p.y<innerHeight+40);
+  raf=parts.length?requestAnimationFrame(tick):(cx.clearRect(0,0,innerWidth,innerHeight),null);
+}
+function celebrate(){let k=0;const iv=setInterval(()=>{burst(70,Math.random()*innerWidth,innerHeight*0.3);if(++k>5)clearInterval(iv)},280)}
+
+
+// ---------- reveal + nav highlight
+const io="IntersectionObserver" in window?new IntersectionObserver(es=>es.forEach(en=>{if(en.isIntersecting)en.target.classList.add("vis")}),{threshold:.08}):null;
+document.querySelectorAll(".reveal").forEach(s=>io?io.observe(s):s.classList.add("vis"));
+const navIo="IntersectionObserver" in window?new IntersectionObserver(es=>es.forEach(en=>{if(en.isIntersecting){document.querySelectorAll("#nav a").forEach(a=>a.classList.toggle("on",a.getAttribute("href")==="#"+en.target.id))}}),{rootMargin:"-45% 0px -50% 0px"}):null;
+document.querySelectorAll("main section[id]").forEach(s=>navIo&&navIo.observe(s));
+// ---------- init
+$("#heroArt").innerHTML=colonySVG(false).replace('<svg ','<svg class="heroart" ');
+$("#medArt").innerHTML=medusaSVG();
+$("#lde").onclick=()=>setLang("de");$("#len").onclick=()=>setLang("en");
+applyLang();
+
+</script>
+</body>
+</html>
